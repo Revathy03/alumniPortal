@@ -17,6 +17,7 @@ export class AppComponent {
   constructor(private _service:AlumniServicesService, private router:Router){}
 
   ngOnInit(){
+
     this.router.navigate(['/signin'])
   }
 
