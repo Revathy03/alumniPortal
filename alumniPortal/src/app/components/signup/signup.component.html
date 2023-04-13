@@ -1,4 +1,4 @@
-<p>sigup page works</p>
+
 <!--<html>
     <head><title>Registration Form</title>
     <meta charset="UTF-8">
@@ -119,169 +119,115 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
+    <!-- <link rel="stylesheet" href="css/style.css" /> -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     />
-    <title>Make a Website Using HTML/CSS</title>
+    <title>SIGN UP</title>
   </head>
   <body>
     <header>
       <!-- Navbar -->
       <nav id="navbar">
         <div class="container">
-          <h1><a href="#">HubTech</a></h1>
+          <img src="assets/images/collegelogo2.png" id="logo">
           <ul>
-            <li><a href="index.html" class="current">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a (click)="homepage()">Home</a></li>
+			      <li><a (click)="eventspage()">Events</a></li>
+            <li><a (click)="contactpage()">Contact</a></li>
+            <li><a (click)="signin()">Sign In</a></li>
+            <li><a (click)="signup()">Sign Up</a></li>
           </ul>
         </div>
       </nav>
       <!-- Showcase Area -->
-      <div id="showcase">
-        <div class="container">
+      <!-- <div id="showcase">
+        <div class="container">-->
           <div class="showcase-content">
-            <h2>The Hub of Technology</h2>
-            <p class="lead">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique delectus ut velit
-              ducimus quaerat quisquam, ex, suscipit deleniti illum consequatur omnis deserunt,
-              placeat facere quasi dolores cupiditate non error necessitatibus! Lorem ipsum dolor,
-              sit amet consectetur adipisicing elit.
-            </p>
-            <a href="#" class="btn">Read More</a>
+            <h2>SIGN UP</h2>
           </div>
-        </div>
-      </div>
+        <!-- </div>
+      </div> -->
     </header>
 
-    <!-- About Section -->
-    <section class="about">
-      <div class="container">
-        <h3 class="bg-dark-line"><span>About Us</span></h3>
-        <p class="lead">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi beatae nobis officiis illum
-          quo eum deserunt fuga numquam! Provident sint iusto, doloremque quae consectetur ipsa
-          harum minus enim in possimus. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Quasi beatae nobis officiis illum quo eum deserunt fuga numquam! Provident sint iusto,
-          doloremque quae consectetur ipsa harum minus enim in possimus. Lorem ipsum dolor sit amet
-          consectetur adipisicing elit. Quasi beatae nobis officiis illum quo eum deserunt fuga
-          numquam! Provident sint iusto, doloremque quae consectetur ipsa harum minus enim in
-          possimus.
-        </p>
-        <p class="lead">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique debitis neque
-          exercitationem. A, consequatur magnam asperiores impedit adipisci perferendis ab aperiam!
-          Voluptatum ducimus ratione maiores. Et ut maxime accusamus mollitia. Lorem ipsum dolor,
-          sit amet consectetur adipisicing elit. Iusto, fuga. Voluptatibus, tenetur veritatis
-          ratione tempore optio quas debitis quis accusamus culpa maiores dolor facilis obcaecati
-          aspernatur suscipit cupiditate perspiciatis minus?
-        </p>
-      </div>
-    </section>
-    <!-- Our Services -->
-    <div id="services">
-      <div class="container">
-        <h3 class="bg-dark-line"><span>Services</span></h3>
-        <div class="box bg-primary">
-          <h2>Web Designing</h2>
-          <i class="fa-solid fa-paintbrush fa-4x"></i>
-          <p class="lead">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam iusto, pariatur sint
-            culpa vero impedit ex tenetur doloremque, nihil corrupti, amet soluta? Earum, quidem
-            culpa.
-          </p>
-        </div>
-        <div class="box light-gray">
-          <h2>Web Development</h2>
-          <i class="fa-solid fa-code fa-4x"></i>
-          <p class="lead">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam iusto, pariatur sint
-            culpa vero impedit ex tenetur doloremque, nihil corrupti, amet soluta? Earum, quidem
-            culpa.
-          </p>
-        </div>
-        <div class="box bg-primary">
-          <h2>Desktop Application</h2>
-          <i class="fa-solid fa-desktop fa-4x"></i>
-          <p class="lead">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam iusto, pariatur sint
-            culpa vero impedit ex tenetur doloremque, nihil corrupti, amet soluta? Earum, quidem
-            culpa.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div class="clr"></div>
-
-    <!-- Authors -->
-    <div id="authors">
-      <div class="container">
-        <h3><span>Authors</span></h3>
-        <div class="auth">
-          <img src="./img/Authors/person1.png" alt="" />
-          <p class="names">John Doe</p>
-          <p>Admin</p>
-          <p class="lead">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem aut quod, earum
-            quaerat eveniet doloribus quasi nam est illo reiciendis fugiat sit blanditiis omnis
-            cumque quos error temporibus quisquam eligendi?
-          </p>
-        </div>
-        <div class="auth">
-          <img src="./img/Authors/person4.png" alt="" />
-          <p class="names">Suzi</p>
-          <p>Manager</p>
-          <p class="lead">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem aut quod, earum
-            quaerat eveniet doloribus quasi nam est illo reiciendis fugiat sit blanditiis omnis
-            cumque quos error temporibus quisquam eligendi?
-          </p>
-        </div>
-        <div class="auth">
-          <img src="./img/Authors/person3.png" alt="" />
-          <p class="names">Jason</p>
-          <p>Accountant</p>
-          <p class="lead">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem aut quod, earum
-            quaerat eveniet doloribus quasi nam est illo reiciendis fugiat sit blanditiis omnis
-            cumque quos error temporibus quisquam eligendi?
-          </p>
-        </div>
-      </div>
-    </div>
-
     <!-- Contact -->
-    <div id="contact">
-      <div class="container">
-        <h3><span>Contact Us</span></h3>
+<div id="contact">
+    <div class="container">
+        <h3><span>SIGN UP</span></h3>
         <div class="contact-form">
-          <form action="process.php">
+          <form>
             <div class="form-group">
               <label for="name">Name</label>
-              <input type="text" name="name" />
+              <input type="text" name="name"/>
             </div>
             <div class="form-group">
               <label for="email">Email</label>
-              <input type="email" name="name" />
+              <input type="email" name="name" id="email"/>
             </div>
             <div class="form-group">
-              <label for="message">Message</label>
-              <textarea name="message" id="message" cols="30" rows="10"></textarea>
+              <label for="password">Password</label>
+              <input type="password" name="password" id="password"/>
+            </div>
+
+            <div class="form-group">
+              <label for="Contact">Contact</label>
+              <input type="Contact" name="Contact"/>
+            </div>
+
+            <div class="form-group">
+              <label for="image">Image</label>
+              <input type="file" name="image"/>
+            </div>
+
+            <div class="form-group">
+              <label for="year">Year of Passout</label>
+              <input type="month" name="year"/>
+            </div>
+
+            <div class="form-group">
+              <label for="course">Course</label>
+              <select>
+                <option>BTech</option>
+                <option>MTech</option>
+                <option>PhD</option>
+            </select>
+            </div>
+
+            <div class="form-group">
+              <label for="dept">Department</label>
+              <select>
+                <option>Select</option>
+                <option>CS</option>
+                <option>IT</option>
+                <option>EC</option>
+                <option>AEI</option>
+                <option>Civil</option>
+            </select>
+            </div>
+
+            <div class="form-group">
+              <label for="design">Designation</label>
+              <input type="text" name="design"/>
+            </div>
+
+            <div class="form-group">
+              <label for="comp">Company</label>
+              <input type="text" name="comp"/>
+            </div>
+
+            <div class="form-group">
+              <label for="add">Address</label>
+              <textarea name="add" id="add" cols="30" rows="10"></textarea>
             </div>
             <button type="button" class="btn">Submit</button>
           </form>
-        </div>
-      </div>
     </div>
+  </div>
+</div>
     <footer id="main-footer">
       <div class="container">
-        <p>
-          The Hub of Technology Design by
-          <a href="http://onlineittuts.com"> OnlineITtuts </a> &copy 2022
-        </p>
+        <h2 style="color: #f6f6f6;text-align: right;padding-right:80px;">Made With <span id="boot-icon" class="bi bi-heart-fill" style="font-size: 3rem; color: rgb(255, 0, 0);"></span></h2>
       </div>
     </footer>
   </body>
