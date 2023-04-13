@@ -46,14 +46,18 @@ export class LogInComponent {
         identifier:this.identifier,
         password:this.password
       }
-      console.log(this.credentials)
     this._service.authenticate(this.credentials).subscribe(
       (res: any)=>{
-        this.user=res.user;
+
         this._service.token=res?.jwt;
         this._service.uid=res.user.id;
-        if(this._service.token)
-        this.router.navigate(['/dashboard'],)
+        const adm=res.user.admin
+        if(adm){
+        this.router.navigate(['/adm-dashboard'],)}
+        else{
+          this.router.navigate(['/dashboard'],)}
+ 
+        
         
       },
       (error:any)=>{
