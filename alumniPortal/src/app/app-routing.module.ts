@@ -10,6 +10,7 @@ import { AlumniDashboardComponent } from './components/alumni-dashboard/alumni-d
 import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
 import { AlumniListComponent } from './components/alumni-list/alumni-list.component';
 import { AlumniAlumniListComponent } from './components/alumni-alumni-list/alumni-alumni-list.component';
+import { RequestListComponent } from './components/request-list/request-list.component';
 
 const routes: Routes = [
   {
@@ -55,6 +56,10 @@ const routes: Routes = [
 {
   path:'alumnilist', 
   component:AlumniAlumniListComponent      //alumni list for alumni dashboard 
+},
+{
+  path:'requests', 
+  component:RequestListComponent
 },
 ];
 
