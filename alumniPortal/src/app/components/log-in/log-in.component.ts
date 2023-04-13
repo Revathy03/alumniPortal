@@ -11,7 +11,10 @@ export class LogInComponent {
 
   public user:any;
   public token:any;
+  public identifier:string|undefined;
+  public password:string|undefined;
   public errorMessage: string|undefined;
+  public credentials:any;
 
   constructor(private _service:AlumniServicesService , private router:Router){}
 
@@ -35,18 +38,30 @@ export class LogInComponent {
 
   }
 
-  public logIn(credentials:any){
-    this._service.authenticate(credentials).subscribe(
+  public logIn(){
+
+    if(this.identifier && this.password){
+
+      this.credentials={
+        identifier:this.identifier,
+        password:this.password
+      }
+      console.log(this.credentials)
+    this._service.authenticate(this.credentials).subscribe(
       (res: any)=>{
-        this.user=res;
+        this.user=res.user;
         this._service.token=res?.jwt;
-        
+        this._service.uid=res.user.id;
         if(this._service.token)
         this.router.navigate(['/dashboard'],)
-        else{
+        
+      },
+      (error:any)=>{
+        
           this.errorMessage="Inavlid credentials!"                                               //invalid creddentials
-        }
+        
       }
      )
+    }
     }
 }

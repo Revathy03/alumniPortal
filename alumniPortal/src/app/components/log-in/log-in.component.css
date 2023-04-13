@@ -266,3 +266,8 @@ a{
     text-align: center;
     color:#fff;
 }
+
+.invalid{
+    text-align: center;
+    color: red;
+  }

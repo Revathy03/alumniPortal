@@ -52,14 +52,17 @@
           <form action="process.php">
             <div class="form-group">
               <label for="email">Email-id</label>
-              <input type="email" name="email" />
+              <input type="email" name="email" [(ngModel)]="identifier" required />
             </div>
             <div class="form-group">
               <label for="password">Password</label>
-              <input type="password" name="password" />
+              <input type="password" name="password" [(ngModel)]="password" required  />
             </div>
-            <button type="button" class="btn">Sign-in</button>
+            <button type="submit" (click)="logIn()" class="btn">Sign-in</button>
           </form>
+          <div class="invalid" *ngIf="errorMessage">
+            {{errorMessage}}
+            </div>
         </div>
       </div>
     </div>

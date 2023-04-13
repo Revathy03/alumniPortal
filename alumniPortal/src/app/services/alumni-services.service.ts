@@ -39,11 +39,11 @@ public uid:number=0;
   }
 
   public register(user:any): any{
-    return this._http.post(this.userUrl,user);
+    return this._http.post(this.authUrl,user);
   }
 
   public authenticate(credentials:any): any{
-    return this._http.post(this.userUrl,credentials);
+    return this._http.post(this.authUrl,credentials);
   }
 
   public postNews(news:any): any{
