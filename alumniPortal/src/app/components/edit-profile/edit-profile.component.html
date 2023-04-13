@@ -1,1 +1,205 @@
-<p>edit-profile works!</p>
+<!DOCTYPE html>
+<!-- Designined by CodingLab | www.youtube.com/codinglabyt -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <!--<title> Responsiive Admin Dashboard | CodingLab </title>-->
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+      
+    </div>
+      <ul class="nav-links">
+        <li>
+            <a href="#">
+            <i class='bx bx-grid-alt' ></i>
+            <span class="links_name">Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="active">
+            <i class='bx bx-box' ></i>
+            <span class="links_name">Update-Proflie</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class='bx bx-list-ul' ></i>
+            <span class="links_name">Members-List</span>
+          </a>
+        </li>
+        
+        
+        
+        
+        
+       
+        
+        <li class="log_out">
+          <a href="#">
+            <i class='bx bx-log-out'></i>
+            <span class="links_name">Log out</span>
+          </a>
+        </li>
+      </ul>
+  </div>
+  <section class="home-section">
+    <nav>
+      <div class="sidebar-button">
+        <i class='bx bx-menu sidebarBtn'></i>
+        <span class="dashboard">LBSITW</span>
+      </div>
+      
+      <div class="profile-details">
+        <!--<img src="images/profile.jpg" alt="">--> <div class="notify-icon">
+          <img src="assets/images/users/user-1.jpg" class="img-fluid rounded-circle" alt="" />
+        </div>
+        <span class="admin_name">Apoorva R P<P></P></span>
+        <i class='bx bx-chevron-down' ></i>
+      </div>
+    </nav>
+
+    <div class="home-content">
+      <div class="overview-boxes">
+       
+       
+      
+        
+      </div>
+
+      <div class="sales-boxes">
+        <div class="top-sales box">
+            <div class="box-topic"> <img src="assets/images/users/user-1.jpg" class="rounded-circle avatar-lg img-thumbnail"
+                alt="profile-image">
+                <h4 class="mb-0">Apoorva R P</h4><br>
+                <p class="text-muted">@webdesigner</p><br>
+                
+            </div>
+            <div class="indicator">
+              
+                <span class="text"><h4 class="font-13 text-uppercase">About Me :</h4>
+                  <p class="text-muted font-13 mb-3">
+                      Hi I'm Johnathon Deo,has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type.
+                  </p><br><br>
+                  <p class="text-muted mb-2 font-13"><strong>Full Name :</strong> <span class="ms-2">Apoorva R P</span></p><br>
+  
+                  <p class="text-muted mb-2 font-13"><strong>Mobile :</strong><span class="ms-2">(123) 123 1234</span></p><br>
+  
+                  <p class="text-muted mb-2 font-13"><strong>Email :</strong> <span class="ms-2">user@email.domain</span></p><br>
+  
+                  <p class="text-muted mb-1 font-13"><strong>Location :</strong> <span class="ms-2">USA</span></p></span><br>
+              </div>
+          </div>
+        <div class="recent-sales box">
+          <div class="title">Update Profile:</div><br>
+          <div class="sales-details">
+            <form>
+                    
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-4">
+                            <label>Image  </label>
+                            <input type="file"><br><br>
+                        </div><br>
+                    </div> 
+                    <div class="col-md-6">
+                        <div class="mb-4">
+                            <label for="firstname" class="form-label">First Name   </label>
+                            <input type="text" class="form-control" id="firstname" placeholder="Enter first name"><br>
+                        </div><br>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-4">
+                            <label for="lastname" class="form-label">Last Name   </label>
+                            <input type="text" class="form-control" id="lastname" placeholder="Enter last name"><br>
+                        </div><br>
+                    </div> <!-- end col -->
+                </div> <!-- end row -->
+
+                
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-4">
+                            <label for="useremail" class="form-label">Email Address   </label>
+                            <input type="email" class="form-control" id="useremail" placeholder="Enter email"><br>
+                           
+                        </div><br>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="mb-4">
+                            <label for="number" class="form-label">Contact    </label>
+                            <input type="number" class="form-control" id="number" placeholder="Enter number"><br>
+                           
+                        </div><br>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="mb-4">
+                            <label for="userpassword" class="form-label">Password   </label>
+                            <input type="password" class="form-control" id="userpassword" placeholder="Enter password"><br>
+                           
+                        </div>
+                    </div> <!-- end col --><br>
+                </div> <!-- end row -->
+
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-4">
+                            <label for="companyname" class="form-label">Company Name   </label>
+                            <input type="text" class="form-control" id="companyname" placeholder="Enter company name"><br>
+                        </div><br>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-4">
+                            <label for="cwebsite" class="form-label">Designation   </label>
+                            <input type="text" class="form-control" id="cwebsite" placeholder="Enter your Designation"><br>
+                        </div><br>
+                    </div> <!-- end col -->
+                    <div class="col-md-6">
+                        <div class="mb-4">
+                            <label for="loc" class="form-label">Location   </label>
+                            <input type="text" class="form-control" id="loc" placeholder="Enter your Location"><br>
+                        </div><br>
+                    </div> 
+                </div> <!-- end row -->
+
+                
+                
+                
+
+               
+            </form>
+          </div>
+          <div class="button">
+            <a href="#">Update</a>
+          </div>
+        </div>
+    
+      </div>
+    </div>
+  </section>
+
+  <script>
+   let sidebar = document.querySelector(".sidebar");
+let sidebarBtn = document.querySelector(".sidebarBtn");
+sidebarBtn.onclick = function() {
+  sidebar.classList.toggle("active");
+  if(sidebar.classList.contains("active")){
+  sidebarBtn.classList.replace("bx-menu" ,"bx-menu-alt-right");
+}else
+  sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+}
+ </script>
+
+</body>
+</html>
+
+
