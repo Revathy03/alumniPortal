@@ -54,13 +54,10 @@ export class SignupComponent {
 
   }
   public onSubmit(data:any){
-    console.log(data);
     data = { "data": data };
-    console.log(data);
     this._service.addMemberReq(data).subscribe(
       (res: any)=>{
-        //console.log(res);
-        //this.router.navigate(['/home'],)//should change
+        
       }
      )     
      this.showNotification = true;

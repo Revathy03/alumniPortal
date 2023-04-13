@@ -391,6 +391,37 @@ a{
     border-color: #265ede;
 }
 
+.alert-danger {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  color:red;
+}
+
+.notification {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  width: 400px;
+  height: 150px;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  padding: 16px;
+  background-color: rgb(209, 243, 253);
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.notification p {
+  text-align: center;
+}
+
+.notification button {
+  width: 100px;
+  margin-top: 16px;
+}
 
 /* Footer */
 
