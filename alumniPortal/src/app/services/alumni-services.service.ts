@@ -15,7 +15,7 @@ public uid:number=0;
   memberreqUrl:string="http://localhost:1337/api/memberreqs";
   authUrl:string="http://localhost:1337/api/auth/local";
   publishUrl:string="http://localhost:1337/api/publishes";
-  commentsUrl:string="http://localhost:1337/api/feedbacks";
+  commentsUrl:string="http://localhost:1337/api/comments";
 
   public fetchAlumnis():any{
     return this._http.get(this.userUrl)   

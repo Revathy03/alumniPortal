@@ -16,6 +16,7 @@ export class ContactComponent {
   comments:any;
   public errorMessage:string|undefined;
   showNotification = false;
+  isValidEmail=true;
 
   constructor(private _service:AlumniServicesService , private router:Router,private location: Location){}
 
@@ -45,13 +46,28 @@ export class ContactComponent {
     console.log(this.name);
     console.log(this.email);
     console.log(this.msg);
-    
-  /*  this._service.postFeedback(this.comments).subscribe(
-      (res: any)=>{
+    const emailRegex = /\S+@\S+\.\S+/;
+    this. isValidEmail = emailRegex.test(this.email);
+    if(this.isValidEmail){
+    this.comments={
+      data:{
+        name:this.name,
+        email:this.email,
+        message:this.msg
       }
-     )*/
+    }
+    console.log(this.comments);
+    this._service.postFeedback(this.comments).subscribe(
+      (res: any)=>{
+        
+      }
+     )
      this.errorMessage="";
      this.showNotification = true;
+    }
+    else{
+      this.errorMessage="Please enter valid email!"
+    }
     }
     else{
       this.errorMessage="Please enter all the fields!"    
@@ -60,11 +76,11 @@ export class ContactComponent {
 
   public  hideNotification(){
     this.showNotification = false;
-    this.router.navigate(['/home'],)
-    /*this.router.navigate(['/contact'],).then(() => {
-      this.location.go('/contact');
-      window.location.reload();
-    });*/
+  
+    this.router.navigateByUrl('/', { skipLocationChange: true }).then(() => {
+      this.router.navigate(['/contact']);
+    });
+
    }
 }
  
