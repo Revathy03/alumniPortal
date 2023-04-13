@@ -20,12 +20,12 @@ export class AppComponent {
     this.router.navigate(['/home'])
   }
 
-  public fetch(){
+  /*public fetch(){
     this._service.fetchMembers().subscribe(
       (res: any)=>{
         this.members=res.data;
         console.log(this.members);
       }
      )
-  }
+  }*/
 }
