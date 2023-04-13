@@ -14,7 +14,7 @@ export class EventsComponent {
 
   public eventspage(){                                //to navigate between pages from nav bar
     this.router.navigate(['/events'],)
-  }
+  }                                                   //static event page
   public contactpage(){
     this.router.navigate(['/contact'],)
 

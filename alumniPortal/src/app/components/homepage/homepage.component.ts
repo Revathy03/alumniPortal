@@ -9,7 +9,12 @@ import { AlumniServicesService } from 'src/app/services/alumni-services.service'
 })
 export class HomepageComponent {
 
+
   constructor(private _service:AlumniServicesService , private router:Router){}
+
+  ngOnInit(){
+    this._service.token=null;
+  }
 
   public eventspage(){                                 //to navigate between pages from nav bar
     this.router.navigate(['/events'],)

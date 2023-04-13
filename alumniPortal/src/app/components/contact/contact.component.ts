@@ -31,4 +31,11 @@ export class ContactComponent {
     this.router.navigate(['/signin'],)
 
   }
+
+  public feedback(comments:any){
+    this._service.postFeedback(comments).subscribe(
+      (res: any)=>{
+      }
+     )
+  }
 }
