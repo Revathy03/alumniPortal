@@ -13,7 +13,7 @@ export class ContactComponent {
   constructor(private _service:AlumniServicesService , private router:Router){}
 
   public eventspage(){
-    this.router.navigate(['/events'],)
+    this.router.navigate(['/events'],)                          //to navigate between pages from nav bar
   }
   public contactpage(){
     this.router.navigate(['/contact'],)

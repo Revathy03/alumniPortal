@@ -11,7 +11,7 @@ export class HomepageComponent {
 
   constructor(private _service:AlumniServicesService , private router:Router){}
 
-  public eventspage(){
+  public eventspage(){                                 //to navigate between pages from nav bar
     this.router.navigate(['/events'],)
   }
   public contactpage(){
