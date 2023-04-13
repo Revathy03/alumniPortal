@@ -8,6 +8,8 @@ import { ContactComponent } from './components/contact/contact.component';
 import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
 import { AlumniDashboardComponent } from './components/alumni-dashboard/alumni-dashboard.component';
 import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
+import { AlumniListComponent } from './components/alumni-list/alumni-list.component';
+import { AlumniAlumniListComponent } from './components/alumni-alumni-list/alumni-alumni-list.component';
 
 const routes: Routes = [
   {
@@ -45,6 +47,14 @@ const routes: Routes = [
 {
   path:'profile', 
   component:EditProfileComponent
+},
+{
+  path:'list',                             //alumni list for admin dashboard 
+  component:AlumniListComponent
+},
+{
+  path:'alumnilist', 
+  component:AlumniAlumniListComponent      //alumni list for alumni dashboard 
 },
 ];
 

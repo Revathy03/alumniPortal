@@ -21,6 +21,11 @@ public uid:number=0;
     return this._http.get(this.userUrl)   
   }
 
+  public fetchAlumni(id:any):any{
+    return this._http.get(this.userUrl+'/:id')   
+  }
+
+
   public addMemberReq(member:any): any{
     return this._http.post(this.memberreqUrl,member);
   }
@@ -28,7 +33,7 @@ public uid:number=0;
   public fetchReqs():any{
     return this._http.get(this.memberreqUrl)   
   }
-  
+
   public deletereq( id:number):any{
     return this._http.delete(this.memberreqUrl+'/:id') ;  
   }

@@ -21,5 +21,14 @@ export class AlumniListComponent {
      )    
   }
 
-  
+  public remove(id:number){
+    this._service.deleteUser(id).subscribe(
+      (res: any)=>{
+        this.router.navigate(['/list'],)
+      }
+     )     
+
+  }
+
+
 }

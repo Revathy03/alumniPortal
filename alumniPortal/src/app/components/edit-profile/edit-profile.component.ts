@@ -8,12 +8,18 @@ import { AlumniServicesService } from 'src/app/services/alumni-services.service'
   styleUrls: ['./edit-profile.component.css']
 })
 export class EditProfileComponent {
-
+  user:any;
   id:number=0;
   constructor(private _service:AlumniServicesService , private router:Router){}
 
   ngOnInit(){
     this.id=this._service.uid;
+    this._service.fetchAlumni(this.id).subscribe(
+      (res: any)=>{
+        this.user=res;
+      }
+     )    
+
   }
 
   public update(data:any){
