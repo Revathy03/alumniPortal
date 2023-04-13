@@ -42,10 +42,6 @@ export class ContactComponent {
 
   public feedback(){
     if(this.name && this.email && this.msg){
-    console.log("feedback fnn");
-    console.log(this.name);
-    console.log(this.email);
-    console.log(this.msg);
     const emailRegex = /\S+@\S+\.\S+/;
     this. isValidEmail = emailRegex.test(this.email);
     if(this.isValidEmail){
@@ -56,7 +52,6 @@ export class ContactComponent {
         message:this.msg
       }
     }
-    console.log(this.comments);
     this._service.postFeedback(this.comments).subscribe(
       (res: any)=>{
         
