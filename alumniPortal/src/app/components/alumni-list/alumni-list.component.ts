@@ -18,7 +18,7 @@ export class AlumniListComponent {
       (res: any)=>{
         this.users=res;
       }
-     )    
+     )     
   }
 
   public remove(id:number){
@@ -29,6 +29,10 @@ export class AlumniListComponent {
      )     
 
   }
+
+  public dashboard(){    
+    this.router.navigate(['/adm-dashboard'],)    
+}
 
 
 }

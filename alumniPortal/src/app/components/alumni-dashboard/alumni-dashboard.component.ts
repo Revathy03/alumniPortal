@@ -38,4 +38,8 @@ export class AlumniDashboardComponent {
     this.router.navigate(['/home'],)
   }
 
+  public alumniList(){
+    this.router.navigate(['/alumnilist'],)
+  }
+
 }
