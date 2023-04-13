@@ -12,6 +12,11 @@ import { SignupComponent } from './components/signup/signup.component';
 import { LogInComponent } from './components/log-in/log-in.component';
 import { EventsComponent } from './components/events/events.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { AboutComponent } from './components/about/about.component';
+import { AlumniDashboardComponent } from './components/alumni-dashboard/alumni-dashboard.component';
+import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
+import { AlumniListComponent } from './components/alumni-list/alumni-list.component';
+import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +25,12 @@ import { ContactComponent } from './components/contact/contact.component';
     SignupComponent,
     LogInComponent,
     EventsComponent,
-    ContactComponent
+    ContactComponent,
+    AboutComponent,
+    AlumniDashboardComponent,
+    AdminDashboardComponent,
+    AlumniListComponent,
+    EditProfileComponent
   ],
   imports: [
     BrowserModule,
