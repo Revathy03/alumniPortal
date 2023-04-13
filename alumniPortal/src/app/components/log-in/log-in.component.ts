@@ -9,6 +9,9 @@ import { AlumniServicesService } from 'src/app/services/alumni-services.service'
 })
 export class LogInComponent {
 
+  public user:any;
+  public token:any;
+  public errorMessage: string|undefined;
 
   constructor(private _service:AlumniServicesService , private router:Router){}
 
@@ -31,4 +34,19 @@ export class LogInComponent {
     this.router.navigate(['/signin'],)
 
   }
+
+  public logIn(credentials:any){
+    this._service.authenticate(credentials).subscribe(
+      (res: any)=>{
+        this.user=res;
+        this._service.token=res?.jwt;
+        
+        if(this._service.token)
+        this.router.navigate(['/dashboard'],)
+        else{
+          this.errorMessage="Inavlid credentials!"                                               //invalid creddentials
+        }
+      }
+     )
+    }
 }

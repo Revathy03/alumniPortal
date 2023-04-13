@@ -59,13 +59,10 @@ export class SignupComponent {
     console.log(data);
     this._service.addMemberReq(data).subscribe(
       (res: any)=>{
-        console.log(res);
-
+        //console.log(res);
         //this.router.navigate(['/home'],)//should change
       }
-     )
-     
-     
+     )     
      this.showNotification = true;
 
   }

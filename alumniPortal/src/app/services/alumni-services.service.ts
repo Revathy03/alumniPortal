@@ -6,6 +6,9 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AlumniServicesService {
 
+public token:any|undefined;
+public uid:number=0;
+
   constructor(private _http:HttpClient) { }
 
   userUrl:string="http://localhost:1337/api/users";
@@ -20,6 +23,14 @@ export class AlumniServicesService {
 
   public addMemberReq(member:any): any{
     return this._http.post(this.memberreqUrl,member);
+  }
+
+  public fetchReqs():any{
+    return this._http.get(this.memberreqUrl)   
+  }
+  
+  public deletereq( id:number):any{
+    return this._http.delete(this.memberreqUrl+'/:id') ;  
   }
 
   public register(user:any): any{
@@ -46,6 +57,13 @@ export class AlumniServicesService {
     return this._http.delete(this.userUrl+'/:id') ;  
   }
 
+  public postFeedback(comment:any): any{
+    return this._http.post(this.commentsUrl,comment);
+  }
+
+  public getFeedback():any{
+    return this._http.get(this.commentsUrl)  ; 
+  }
 
 
 }
