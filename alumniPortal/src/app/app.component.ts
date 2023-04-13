@@ -17,7 +17,8 @@ export class AppComponent {
   constructor(private _service:AlumniServicesService, private router:Router){}
 
   ngOnInit(){
-    this.router.navigate(['/home'])
+
+    this.router.navigate(['/signin'])
   }
 
   /*public fetch(){
