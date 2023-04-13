@@ -55,13 +55,9 @@ export class LogInComponent {
         if(adm){
         this.router.navigate(['/adm-dashboard'],)}
         else{
-          this.router.navigate(['/dashboard'],)}
- 
-        
-        
+          this.router.navigate(['/dashboard'],)}       
       },
-      (error:any)=>{
-        
+      (error:any)=>{       
           this.errorMessage="Inavlid credentials!"                                               //invalid creddentials
         
       }
