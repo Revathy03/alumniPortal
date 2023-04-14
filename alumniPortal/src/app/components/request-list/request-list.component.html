@@ -57,7 +57,7 @@
             <div class="notify-icon">
               <img src="assets/images/users/user-1.jpg" class="img-fluid rounded-circle" alt="" />
           </div>
-            <span class="admin_name">Apoorva R P</span>
+            <span class="admin_name">{{user.name}}</span>
             
       
           </div>
@@ -65,17 +65,20 @@
 
     <div class="home-content">
       <div class="overview-boxes">
-        <div class="box">
+        <div class="box" *ngFor="let req of reqs">
           <div class="right-side">
             <div class="box-topic"> <img src="assets/images/users/user-1.jpg" class="rounded-circle avatar-lg img-thumbnail"
                 alt="profile-image">
-                <h4 class="mb-0">Nayza Thasneem</h4><br>
-                <p class="text-muted">@Boss</p><br>
+                <h4 class="mb-0">{{req.attributes.name}}</h4><br>
+                <p class="text-muted" *ngIf="req.attributes.designation">{{req.attributes.designation}}</p>
+                <p class="text-muted" *ngIf="req.attributes.company">@{{req.attributes.company}}</p><br>
+                <p class="text-muted">{{req.attributes.department}}</p>
+                <p class="text-muted"> {{(req.attributes.yop) | date:'yyyy'}} Passout</p><br>
                 
             </div>
             
             <div class="indicator">
-                <div class="button2">
+                <div class="button2" (click)="accept(req)">
                     Accept
                   </div><br><br>&nbsp;<div>  <p>  <br></p><br>   <br></div> <div class="button1">
                     Reject
@@ -84,63 +87,7 @@
           </div>
           
         </div>
-        <div class="box">
-            <div class="right-side">
-              <div class="box-topic"> <img src="assets/images/users/user-1.jpg" class="rounded-circle avatar-lg img-thumbnail"
-                  alt="profile-image">
-                  <h4 class="mb-0">Revathy P</h4><br>
-                  <p class="text-muted">@CEO</p><br>
-                  
-              </div>
-              
-              <div class="indicator">
-                  <div class="button2">
-                      Accept
-                    </div><br><br>&nbsp;<div>  <p>  <br></p><br>   <br></div> <div class="button1">
-                      Reject
-                    </div>
-              </div>
-            </div>
-            
-          </div>
-          <div class="box">
-            <div class="right-side">
-              <div class="box-topic"> <img src="assets/images/users/user-1.jpg" class="rounded-circle avatar-lg img-thumbnail"
-                  alt="profile-image">
-                  <h4 class="mb-0">Apoorva R P</h4><br>
-                  <p class="text-muted">@Chair</p><br>
-                  
-              </div>
-              
-              <div class="indicator">
-                  <div class="button2">
-                      Accept
-                    </div><br><br>&nbsp;<div>  <p>  <br></p><br>   <br></div> <div class="button1">
-                      Reject
-                    </div>
-              </div>
-            </div>
-            
-          </div>
-          <div class="box">
-            <div class="right-side">
-              <div class="box-topic"> <img src="assets/images/users/user-1.jpg" class="rounded-circle avatar-lg img-thumbnail"
-                  alt="profile-image">
-                  <h4 class="mb-0">Gowri Krishna L</h4><br>
-                  <p class="text-muted">@Web developer</p><br>
-                  
-              </div>
-              
-              <div class="indicator">
-                  <div class="button2">
-                      Accept
-                    </div><br><br>&nbsp;<div>  <p>  <br></p><br>   <br></div> <div class="button1">
-                      Reject
-                    </div>
-              </div>
-            </div>
-            
-          </div>
+       
         
         
       </div>

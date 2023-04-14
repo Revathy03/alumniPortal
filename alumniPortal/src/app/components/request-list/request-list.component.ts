@@ -9,14 +9,27 @@ import { AlumniServicesService } from 'src/app/services/alumni-services.service'
 })
 export class RequestListComponent {
 
-  public users:any;
+  public reqs:any;
+  public user:any;
+  public id:number=0;
+  public data1:any;
 
   constructor(private _service:AlumniServicesService , private router:Router){}
 
-  ngonInit(){
+  ngOnInit(){
+
+    this.id = this._service.uid;
+   //this.id=6;
+    this._service.fetchAlumni(this.id).subscribe(
+      (res: any) => {
+        this.user = res;
+        this.user.name=this.user.name.toUpperCase()
+      }
+    );
+
     this._service.fetchReqs().subscribe(
       (res: any)=>{
-        this.users=res;
+        this.reqs=res.data;
       }
      )     
   }
@@ -31,15 +44,52 @@ export class RequestListComponent {
   }
 
   public accept(data:any){
-    this._service.deletereq(data.id).subscribe(
+    console.log("accepted")
+    const id=data.id;
+    data=data.attributes
+    console.log(data);
+    if(data.image){
+    this.data1={
+      email:data.email,
+      username:data.email,
+      password:data.password,
+      name:data.name,
+      contact:data.contact,
+      image:data.image,
+      yop:data.yop,
+      course:data.course,
+      department:data.department,
+      designation:data.designation,
+      company:data.company,
+      address:data.address
+    }
+  }
+  else{
+    this.data1={
+      email:data.email,
+      username:data.email,
+      password:data.password,
+      name:data.name,
+      contact:data.contact,
+      yop:data.yop,
+      course:data.course,
+      department:data.department,
+      designation:data.designation,
+      company:data.company,
+      address:data.address
+    }
+  }
+    this._service.deletereq(id).subscribe(
       (res: any)=>{
-        this._service.register(data).subscribe(
+        this._service.register(this.data1).subscribe(
           (res: any)=>{
-            this.router.navigate(['/requests'],)
+            this.router.navigateByUrl('/', { skipLocationChange: true }).then(() => {
+              this.router.navigate(['/requests']);
+            });
           }
          )   
       }
-     )     
+     )    
 
      
 

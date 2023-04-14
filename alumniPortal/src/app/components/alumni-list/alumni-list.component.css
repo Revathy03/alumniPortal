@@ -322,6 +322,11 @@ nav .profile-details i{
   text-decoration: none;
   transition: all 0.3s ease;
 
+
+}
+.button1:hover{
+  background: #f33030;
+  cursor: pointer;
 }
 /* Right box */
 .home-content .sales-boxes .top-sales{
@@ -450,3 +455,97 @@ nav .profile-details i{
   }
 }
 .img-fluid{width:20px;height: 20px;}
+
+table {
+  border-collapse: collapse;
+  width: 200%;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #f5f5f5;
+}
+
+.recent-sales.box {
+  width: 100%;
+  margin-bottom: 20px;
+  background-color: #fff;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.recent-sales.box .title {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 20px;
+  color: #333;
+}
+
+.recent-sales.box table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+}
+
+.recent-sales.box th,
+.recent-sales.box td {
+  text-align: left;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  font-size: 16px;
+}
+
+.recent-sales.box th {
+  color: #333;
+  font-weight: bold;
+}
+
+.recent-sales.box tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.recent-sales.box tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+.recent-sales.box img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.recent-sales.box td:first-child {
+  display: flex;
+  align-items: center;
+}
+
+.recent-sales.box td.button1 {
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .recent-sales.box table {
+    font-size: 14px;
+  }
+  
+  .recent-sales.box th,
+  .recent-sales.box td {
+    padding: 10px;
+  }
+  
+  .recent-sales.box td:first-child {
+    font-size: 14px;
+  }
+  
+  .recent-sales.box img {
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
+  }
+  
+  .recent-sales.box td.button1 {
+    padding: 5px;
+    font-size: 14px;
+  }
+}
+
