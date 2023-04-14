@@ -17,12 +17,12 @@ export class AdminDashboardComponent {
   ngOnInit(){
     this._service.getNews().subscribe(
       (res: any)=>{
-        this.news=res.data[0];
+        this.news=res.data;
       }
      )   
      this._service.getFeedback().subscribe(
       (res: any)=>{
-        this.feedbacks=res.data[0];
+        this.feedbacks=res.data;
       }
      )
 
@@ -35,6 +35,13 @@ export class AdminDashboardComponent {
       }
      )     
 
+  }
+  public editprof(){
+    this.router.navigate(['/profile'],)
+  }
+
+  public dashboard(){
+    this.router.navigate(['/adm-dashboard'],)
   }
 
   public alumniList(){

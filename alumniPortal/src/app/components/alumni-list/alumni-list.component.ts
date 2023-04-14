@@ -30,8 +30,21 @@ export class AlumniListComponent {
 
   }
 
-  public dashboard(){    
-    this.router.navigate(['/adm-dashboard'],)    
+
+public dashboard(){
+  this.router.navigate(['/adm-dashboard'],)
+}
+
+public alumniList(){
+  this.router.navigate(['/list'],)
+}
+
+public reqList(){
+  this.router.navigate(['/requests'],)
+}
+
+public logout(){
+  this.router.navigate(['/home'],)
 }
 
 
