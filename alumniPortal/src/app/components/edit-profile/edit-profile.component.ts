@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AlumniServicesService } from 'src/app/services/alumni-services.service';
 
@@ -10,13 +11,27 @@ import { AlumniServicesService } from 'src/app/services/alumni-services.service'
 export class EditProfileComponent {
   user:any;
   id:number=0;
-  constructor(private _service:AlumniServicesService , private router:Router){}
+  registrationForm!: FormGroup;
 
+  constructor(private _service:AlumniServicesService , private router:Router,private fb: FormBuilder){}
+  
   ngOnInit(){
     this.id=this._service.uid;
     this._service.fetchAlumni(this.id).subscribe(
       (res: any)=>{
         this.user=res;
+        this.user.name=this.user.name.toUpperCase();
+        this.registrationForm = this.fb.group({
+          name: [this.user.name],         
+          contact:[this.user.contact],
+          //image:[this.user.image],                               // image not get uploaded to the database
+          yop:[this.user.yop],
+          course:[this.user.course],
+          department:[this.user.department],
+          company:[this.user.company],
+          designation:[this.user.designation],
+          address:[this.user.address],
+        });
       }
      )    
 
@@ -25,8 +40,9 @@ export class EditProfileComponent {
   public update(data:any){
     this._service.editUser(data,this.id).subscribe(
       (res: any)=>{
-        this.router.navigate(['/profile'],)
-      }
+        this.router.navigateByUrl('/', { skipLocationChange: true }).then(() => {
+          this.router.navigate(['/profile']);
+        });         }
      )     
 
   }

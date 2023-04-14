@@ -449,3 +449,70 @@ nav .profile-details i{
         margin-right: 20px;
     
   }
+
+  #contact h3{
+    width: 100%;
+    border-bottom: 0.5px solid #ddd;;
+    margin-bottom: 35px;
+}
+
+#contact h3 span{
+    background: #ddd;
+    padding: 10px 22px;
+    color: #333;
+    text-align: center;
+    display: inline-block;
+}
+
+#contact .form-group{
+    margin-bottom: 20px;
+}
+
+.contact-form label{
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact-form input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+
+}
+.contact-form select{
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+#contact textarea{
+    height: 200px;
+    width: 100%;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+    outline: none;
+    border-color: #265ede;
+}
+.text-muted {
+  font-size: 20px;
+}
+.mb-0{
+  font-size: 50px;
+  font-weight: lighter;
+}
+.btn{
+  display: inline-block;
+  padding: 07px 16px;
+  background: #29a818;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 03px;
+  color:#fff;
+  transition: all 0.3;
+}
+
+.btn:hover{
+  background: #072c04;
+}

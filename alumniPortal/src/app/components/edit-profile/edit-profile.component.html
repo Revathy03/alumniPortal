@@ -53,8 +53,7 @@
         <!--<img src="images/profile.jpg" alt="">--> <div class="notify-icon">
           <img src="assets/images/users/user-1.jpg" class="img-fluid rounded-circle" alt="" />
         </div>
-        <span class="admin_name">Apoorva R P<P></P></span>
-        <i class='bx bx-chevron-down' ></i>
+        <span class="admin_name">{{user.name}}<P></P></span>
       </div>
     </nav>
 
@@ -70,28 +69,26 @@
         <div class="top-sales box">
             <div class="box-topic"> <img src="assets/images/users/user-1.jpg" class="rounded-circle avatar-lg img-thumbnail"
                 alt="profile-image">
-                <h4 class="mb-0">Apoorva R P</h4><br>
-                <p class="text-muted">@webdesigner</p><br>
-                
+                <h4 class="mb-0">{{user.name}}</h4><br>
+                <p class="text-muted mb-2 font-13" *ngIf="user.designation">{{user.designation}}</p>
+                <p class="text-muted mb-2 font-13" *ngIf="user.company">@{{user.company}}</p><br>
+              
             </div>
             <div class="indicator">
               
-                <span class="text"><h4 class="font-13 text-uppercase">About Me :</h4>
-                  <p class="text-muted font-13 mb-3">
-                      Hi I'm Johnathon Deo,has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type.
-                  </p><br><br>
-                  <p class="text-muted mb-2 font-13"><strong>Full Name :</strong> <span class="ms-2">Apoorva R P</span></p><br>
+                <span class="text">
+                  <p class="text-muted mb-2 font-13"><strong>Full Name : </strong> <span class="ms-2">{{user.name}}</span></p><br>
   
-                  <p class="text-muted mb-2 font-13"><strong>Mobile :</strong><span class="ms-2">(123) 123 1234</span></p><br>
+                  <p class="text-muted mb-2 font-13"><strong>Mobile : </strong><span class="ms-2">{{user.contact}}</span></p><br>
   
-                  <p class="text-muted mb-2 font-13"><strong>Email :</strong> <span class="ms-2">user@email.domain</span></p><br>
+                  <p class="text-muted mb-2 font-13"><strong>Email : </strong> <span class="ms-2">{{user.email}}</span></p><br>
   
-                  <p class="text-muted mb-1 font-13"><strong>Location :</strong> <span class="ms-2">USA</span></p></span><br>
+</span><br>
               </div>
           </div>
         <div class="recent-sales box">
           <div class="title">Update Profile:</div><br>
-          <div class="sales-details">
+      <!--   <div class="sales-details">
             <form>
                     
                 <div class="row">
@@ -103,17 +100,13 @@
                     </div> 
                     <div class="col-md-6">
                         <div class="mb-4">
-                            <label for="firstname" class="form-label">First Name   </label>
-                            <input type="text" class="form-control" id="firstname" placeholder="Enter first name"><br>
+                            <label for="firstname" class="form-label"> Name   </label>
+                            <input type="text" class="form-control" id="firstname" [(ngModel)]=name ><br>
                         </div><br>
                     </div>
-                    <div class="col-md-6">
-                        <div class="mb-4">
-                            <label for="lastname" class="form-label">Last Name   </label>
-                            <input type="text" class="form-control" id="lastname" placeholder="Enter last name"><br>
-                        </div><br>
-                    </div> <!-- end col -->
-                </div> <!-- end row -->
+ 
+                     <!-- end col 
+                </div> <!-- end row 
 
                 
 
@@ -140,8 +133,8 @@
                             <input type="password" class="form-control" id="userpassword" placeholder="Enter password"><br>
                            
                         </div>
-                    </div> <!-- end col --><br>
-                </div> <!-- end row -->
+                    </div> <!-- end col <br>
+                </div> <!-- end row 
 
                 
                 <div class="row">
@@ -156,14 +149,14 @@
                             <label for="cwebsite" class="form-label">Designation   </label>
                             <input type="text" class="form-control" id="cwebsite" placeholder="Enter your Designation"><br>
                         </div><br>
-                    </div> <!-- end col -->
+                    </div> <!-- end col 
                     <div class="col-md-6">
                         <div class="mb-4">
                             <label for="loc" class="form-label">Location   </label>
                             <input type="text" class="form-control" id="loc" placeholder="Enter your Location"><br>
                         </div><br>
                     </div> 
-                </div> <!-- end row -->
+                </div> <!-- end row 
 
                 
                 
@@ -174,6 +167,76 @@
           </div>
           <div class="button">
             <a href="#">Update</a>
+          </div>--> 
+          <div class="contact-form">
+            <form [formGroup]="registrationForm" (ngSubmit)="update(registrationForm.value)">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" name="name" formControlName="name"/>
+              </div>
+              <br>
+             
+              <div class="form-group">
+                <label for="Contact">Contact</label>
+                <input type="Contact" name="Contact" formControlName="contact"/>
+              </div>
+              <br>
+            
+              <div class="form-group">
+                <label for="image">Image</label>
+                <input type="file" name="image"/>
+              </div>
+              <br>
+  
+       <!--     <div class="form-group">
+                <label for="year">Year of Passout</label>
+                <input type="date" name="yop" formControlName="yop"/>
+              </div>
+              <br>
+              
+              <div class="form-group">
+                <label for="course">Course</label>
+                <select name="course" formControlName="course">
+                  <option>BTech</option>
+                  <option>MTech</option>
+                  <option>PhD</option>
+              </select>
+              </div>
+              <br>
+             
+              <div class="form-group">
+                <label for="dept">Department</label>
+                <select name="department" formControlName="department">
+                  <option>CS</option>
+                  <option>IT</option>
+                  <option>EC</option>
+                  <option>AE</option>
+                  <option>Civil</option>
+              </select>
+              </div>
+              <br>
+              -->  
+  
+              <div class="form-group">
+                <label for="design">Designation</label>
+                <input type="text" name="designation" formControlName="designation"/>
+              </div>
+              <br>
+  
+              <div class="form-group">
+                <label for="comp">Company</label>
+                <input type="text" name="Company" formControlName="company"/>
+              </div>
+              <br>
+  
+              <div class="form-group">
+                <label for="add">Address</label>
+                <textarea name="address" formControlName="address" id="add" cols="105" rows="10"></textarea>
+              </div>
+              <br><br>
+              
+              <button type="submit" class="btn">Save</button>
+            </form>
           </div>
         </div>
     
