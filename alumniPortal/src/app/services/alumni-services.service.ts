@@ -22,6 +22,7 @@ public uid:number=0;
   }
 
   public fetchAlumni(id:any):any{
+    console.log("service called")
     return this._http.get(this.userUrl+'/'+id)   
   }
 
@@ -35,11 +36,11 @@ public uid:number=0;
   }
 
   public deletereq( id:number):any{
-    return this._http.delete(this.memberreqUrl+'/:id') ;  
+    return this._http.delete(this.memberreqUrl+'/'+id) ;  
   }
 
   public register(user:any): any{
-    return this._http.post(this.authUrl,user);
+    return this._http.post(this.authUrl+'/register',user);
   }
 
   public authenticate(credentials:any): any{
@@ -55,11 +56,11 @@ public uid:number=0;
   }
 
   public editUser(data:any, id:number):any{
-    return this._http.put(this.userUrl+'/:id',data) ;  
+    return this._http.put(this.userUrl+'/'+id,data) ;  
   }
 
   public deleteUser( id:number):any{
-    return this._http.delete(this.userUrl+'/:id') ;  
+    return this._http.delete(this.userUrl+'/'+id) ;  
   }
 
   public postFeedback(comment:any): any{

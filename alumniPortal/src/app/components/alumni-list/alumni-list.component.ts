@@ -12,29 +12,30 @@ export class AlumniListComponent {
   public user:any;
   public id:number=0;
   public  alumnis:any
-
   constructor(private _service:AlumniServicesService , private router:Router){}
 
-  ngonInit(){
-    this.id=this._service.uid;
-    this._service.fetchAlumni(6).subscribe(
-      (res: any)=>{
-        this.user=res;
-        this.user.name = this.user.name.toUpperCase();
-        console.log(this.user);
+  ngOnInit(){
+    this.id = this._service.uid;
+    this._service.fetchAlumni(this.id).subscribe(
+      (res: any) => {
+        this.user = res;
+        this.user.name=this.user.name.toUpperCase()
       }
-     ) 
-    this._service.fetchAlumnis().subscribe(
+    );
+    
+     this._service.fetchAlumnis().subscribe(
       (res: any)=>{
         this.alumnis=res;
       }
-     )     
-  }
+     ) 
+    }
 
   public remove(id:number){
     this._service.deleteUser(id).subscribe(
       (res: any)=>{
-        this.router.navigate(['/list'],)
+        this.router.navigateByUrl('/', { skipLocationChange: true }).then(() => {
+          this.router.navigate(['/list']);
+        });
       }
      )     
 
