@@ -18,7 +18,7 @@ export class AppComponent {
 
   ngOnInit(){
 
-    this.router.navigate(['/profile'])
+    this.router.navigate(['/list'])
   }
 
   /*public fetch(){
