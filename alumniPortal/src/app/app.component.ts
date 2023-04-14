@@ -18,7 +18,7 @@ export class AppComponent {
 
   ngOnInit(){
 
-    this.router.navigate(['/alumnilist'])
+    this.router.navigate(['/profile'])
   }
 
   /*public fetch(){
