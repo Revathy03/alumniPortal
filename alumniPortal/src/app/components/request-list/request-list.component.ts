@@ -17,9 +17,8 @@ export class RequestListComponent {
   constructor(private _service:AlumniServicesService , private router:Router){}
 
   ngOnInit(){
-
     this.id = this._service.uid;
-   //this.id=6;
+   this.id=6;
     this._service.fetchAlumni(this.id).subscribe(
       (res: any) => {
         this.user = res;
@@ -37,8 +36,9 @@ export class RequestListComponent {
   public reject(id:number){
     this._service.deletereq(id).subscribe(
       (res: any)=>{
-        this.router.navigate(['/requests'],)
-      }
+        this.router.navigateByUrl('/', { skipLocationChange: true }).then(() => {
+          this.router.navigate(['/requests']);
+        });      }
      )     
 
   }
