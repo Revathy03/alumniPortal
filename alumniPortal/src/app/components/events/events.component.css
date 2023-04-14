@@ -291,3 +291,12 @@ a{
 	margin-bottom: 2rem;
 }
 
+/* Footer */
+
+#main-footer{
+  background: #4d009A;
+  padding: 20px;
+  margin-top: 20px;
+  text-align: center;
+  color:#fff;
+}
