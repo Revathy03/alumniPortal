@@ -9,14 +9,26 @@ import { AlumniServicesService } from 'src/app/services/alumni-services.service'
 })
 export class AlumniAlumniListComponent {
 
-  public users:any;
+  public alumnis:any;
+  id :number=0;
+  user:any;
 
   constructor(private _service:AlumniServicesService , private router:Router){}
 
-  ngonInit(){
+  ngOnInit(){
+
+    this.id = this._service.uid;
+    this.id=6;
+    this._service.fetchAlumni(this.id).subscribe(
+      (res: any) => {
+        this.user = res;
+        this.user.name=this.user.name.toUpperCase()
+      }
+    );
+
     this._service.fetchAlumnis().subscribe(
       (res: any)=>{
-        this.users=res;
+        this.alumnis=res;
       }
      )     
   }
@@ -24,5 +36,18 @@ export class AlumniAlumniListComponent {
   public dashboard(){    
     this.router.navigate(['/dashboard'],)    
 }
+
+public editprof(){
+  this.router.navigate(['/profile'],)
+}
+
+public logout(){
+  this.router.navigate(['/home'],)
+}
+
+public alumniList(){
+  this.router.navigate(['/alumnilist'],)
+}
+
 
 }

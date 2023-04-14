@@ -63,6 +63,9 @@ export class AlumniDashboardComponent {
       return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
     });
   }
+  public dashboard(){    
+    this.router.navigate(['/dashboard'],)    
+}
 
   public editprof(){
     this.router.navigate(['/profile'],)

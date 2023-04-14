@@ -34,6 +34,18 @@ export class EditProfileComponent {
   public dashboard(){ 
         this.router.navigate(['/dashboard'],)   
   }
+  public editprof(){
+    this.router.navigate(['/profile'],)
+  }
+  
+  public logout(){
+    this.router.navigate(['/home'],)
+  }
+
+  public alumniList(){
+    this.router.navigate(['/alumnilist'],)
+  }
+
 
 
 }
