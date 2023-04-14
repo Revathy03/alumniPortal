@@ -18,7 +18,7 @@ export class AppComponent {
 
   ngOnInit(){
 
-    this.router.navigate(['/dashboard'])
+    this.router.navigate(['/signup'])
   }
 
   /*public fetch(){
