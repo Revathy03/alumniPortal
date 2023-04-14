@@ -22,7 +22,7 @@ public uid:number=0;
   }
 
   public fetchAlumni(id:any):any{
-    return this._http.get(this.userUrl+'/:id')   
+    return this._http.get(this.userUrl+'/'+id)   
   }
 
 
