@@ -49,7 +49,7 @@ export class AlumniDashboardComponent {
       }
      )   
      this.id=this._service.uid;
-    this._service.fetchAlumni(6).subscribe(
+    this._service.fetchAlumni(this.id).subscribe(
       (res: any)=>{
         this.user=res;
         this.user.name = this.user.name.toUpperCase();

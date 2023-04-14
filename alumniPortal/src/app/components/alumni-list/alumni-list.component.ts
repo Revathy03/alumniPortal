@@ -9,14 +9,24 @@ import { AlumniServicesService } from 'src/app/services/alumni-services.service'
 })
 export class AlumniListComponent {
 
-  public users:any;
+  public user:any;
+  public id:number=0;
+  public  alumnis:any
 
   constructor(private _service:AlumniServicesService , private router:Router){}
 
   ngonInit(){
+    this.id=this._service.uid;
+    this._service.fetchAlumni(6).subscribe(
+      (res: any)=>{
+        this.user=res;
+        this.user.name = this.user.name.toUpperCase();
+        console.log(this.user);
+      }
+     ) 
     this._service.fetchAlumnis().subscribe(
       (res: any)=>{
-        this.users=res;
+        this.alumnis=res;
       }
      )     
   }
