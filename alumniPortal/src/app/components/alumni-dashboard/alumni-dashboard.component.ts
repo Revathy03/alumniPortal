@@ -1,4 +1,3 @@
-import { UpperCasePipe } from '@angular/common';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AlumniServicesService } from 'src/app/services/alumni-services.service';
@@ -49,6 +48,7 @@ export class AlumniDashboardComponent {
       }
      )   
      this.id=this._service.uid;
+     this.id=6;
     this._service.fetchAlumni(this.id).subscribe(
       (res: any)=>{
         this.user=res;

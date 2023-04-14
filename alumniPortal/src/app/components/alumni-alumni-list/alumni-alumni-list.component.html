@@ -94,7 +94,7 @@
                   
                   <td *ngIf="!alumni.admin"> {{alumni.designation}}</td>
                   <td *ngIf="!alumni.admin"> {{alumni.company}}</td>
-                  <td *ngIf="!alumni.admin"> {{alumni.yop}}</td>
+                  <td *ngIf="!alumni.admin"> {{alumni.yop| date:'yyyy'}}</td>
                   <td *ngIf="!alumni.admin"> {{alumni.department}}</td>
                    
                 </tr>
