@@ -25,13 +25,13 @@
         <li>
           <a href="#">
             <i class='bx bx-box' ></i>
-            <span class="links_name">Update-Profile</span>
+            <span class="links_name" (click)="editprof()">Update-Profile</span>
           </a>
         </li>
         <li>
           <a href="#">
             <i class='bx bx-list-ul' ></i>
-            <span class="links_name">Members-List</span>
+            <span class="links_name" (click)="alumniList()">Members-List</span>
           </a>
         </li>
         
@@ -44,7 +44,7 @@
         <li class="log_out">
           <a href="#">
             <i class='bx bx-log-out'></i>
-            <span class="links_name">Log out</span>
+            <span class="links_name" (click)="logout()" >Log out</span>
           </a>
         </li>
       </ul>
@@ -64,7 +64,7 @@
         <div class="notify-icon">
           <img src="assets/images/users/user-1.jpg" class="img-fluid rounded-circle" alt="" />
       </div>
-        <span class="admin_name">{{user.name}}</span>
+        <span class="admin_name" *ngIf="user.name">{{user.name}}</span>
         
   
       </div>
@@ -74,7 +74,7 @@
       <div class="overview-boxes">
         <div class="box"style="width:100%">
           <div class="right-side">
-            <div class="box-topic">Welcome {{user.name}} !</div>
+            <div class="box-topic" *ngIf="user.name">Welcome {{user.name}} !</div>
             
             <div class="indicator">
               
@@ -87,7 +87,7 @@
           </div>
           <div class="home-content">
             <div class="overview-boxes"style="height:120%;">
-          <div class="box"style="width:100%;">
+          <div class="box"style="width:100%;" *ngIf="nonews">
             <div class="right-side">
               <div class="box-topic">Notifications!!</div>
              

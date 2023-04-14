@@ -16,6 +16,7 @@ export class AlumniDashboardComponent {
 
   id:number=0;
   user:any;
+  nonews=false;
 
   ngOnInit(){
     this._service.getNews().subscribe(
@@ -42,6 +43,9 @@ export class AlumniDashboardComponent {
         : 
         Object*/ 
         console.log(this.news);
+        if (res.length === 0) {
+          this.nonews=true;
+        }
       }
      )   
      this.id=this._service.uid;
