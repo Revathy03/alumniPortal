@@ -35,8 +35,8 @@ export class SignupComponent {
   }
 
   public onFile(event:any){
-    this.selectedFile=<File>event.target.files[0];
-    console.log(this.selectedFile)
+    this.selectedFile=event.target.files[0];
+    console.log(this.selectedFile);
   }
 
   public eventspage(){                              //to navigate between pages from nav bar
@@ -59,16 +59,24 @@ export class SignupComponent {
 
   }
   public onSubmit(data:any){
-    //data.append('image',this.selectedFile,this.selectedFile?.name);
-    data.image=this.selectedFile;
-    console.log(data);
-    data = { "data": data };
-    this._service.addMemberReq(data).subscribe(
-      (res: any)=>{
-        
+    const fd=new FormData();
+    for (const key in data) {
+      if (data.hasOwnProperty(key)) {
+        const value = data[key];
+        fd.append(key, value);
       }
-     )     
-     this.showNotification = true;
+    }
+    console.log(fd);
+    //data.append('image',this.selectedFile,this.selectedFile?.name);
+    // data.image=this.selectedFile;
+    // console.log(data);
+    // data = { "data": data };
+    // this._service.addMemberReq(data).subscribe(
+    //   (res: any)=>{
+        
+    //   }
+    //  )     
+    //  this.showNotification = true;
 
   }
 
