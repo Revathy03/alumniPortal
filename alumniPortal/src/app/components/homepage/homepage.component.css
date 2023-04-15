@@ -9,6 +9,7 @@
 body{
     font-family: 'Poppins';
     line-height: 1.7em;
+      
 
 }
 
@@ -63,12 +64,11 @@ a:hover{
 }
 
 #logo{
-    
-    
     float: left; 
     padding-top: 20px;
     margin-left: 0px;
     padding-left: 0px;
+    padding-bottom: 10px;
     height: 100px;
     width: 100px;
 }
