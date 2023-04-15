@@ -25,12 +25,12 @@ body {
 
 
 #logo{
-  
-  
   float: left; 
   padding-top: 20px;
-  margin-left: 0px;
-  padding-left: 0px;
+  margin-left: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
   height: 100px;
   width: 100px;
 }
@@ -69,7 +69,11 @@ a{
   text-decoration: none;
   color: #fff;
 }
+.container1{
+  max-width: 1100px;
+  margin:auto;
 
+}
 .container {
   width: 100%;
   display: flex;
