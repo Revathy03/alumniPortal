@@ -1,0 +1,78 @@
+{
+  "kind": "collectionType",
+  "collectionName": "memberreqs",
+  "info": {
+    "singularName": "memberreq",
+    "pluralName": "memberreqs",
+    "displayName": "memberreq",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true,
+      "unique": true
+    },
+    "contact": {
+      "type": "biginteger",
+      "required": true,
+      "unique": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "yop": {
+      "type": "date",
+      "required": true
+    },
+    "company": {
+      "type": "string"
+    },
+    "designation": {
+      "type": "string"
+    },
+    "address": {
+      "type": "text",
+      "required": true
+    },
+    "password": {
+      "type": "string",
+      "required": true
+    },
+    "course": {
+      "type": "enumeration",
+      "enum": [
+        "MTech",
+        "BTech",
+        "PhD"
+      ],
+      "required": true,
+      "default": "MTech"
+    },
+    "department": {
+      "type": "enumeration",
+      "enum": [
+        "IT",
+        "CS",
+        "AE",
+        "EC",
+        "Civil"
+      ],
+      "default": "CS",
+      "required": true
+    }
+  }
+}
