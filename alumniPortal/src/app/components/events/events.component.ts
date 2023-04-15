@@ -8,6 +8,10 @@ import { AlumniServicesService } from 'src/app/services/alumni-services.service'
   styleUrls: ['./events.component.css']
 })
 export class EventsComponent {
+  ngOnDestroy() {
+    throw new Error('Method not implemented.');
+  }
+  static innerHTML: string;
 
 
   constructor(private _service:AlumniServicesService , private router:Router){}
