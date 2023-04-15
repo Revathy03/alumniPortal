@@ -81,26 +81,13 @@
           </div>
           
           <div class="post-container">
-            <div class="post">
-              <img src="assets/images/users/user-1.jpg" alt="Post Image">
-              <h2 class="post-title">Post Title</h2>
-              <p class="post-description">Post description goes here</p>
+            <div class="post" *ngFor="let new of news">
+              <img src="assets/images/users/user-1.jpg" alt="new.attributes.image" *ngIf="new.attributes.image" ><br><br>
+              <h2 class="post-title" style="align-content: center;">{{new.attributes.title}}</h2>
+              <p class="post-description">{{new.attributes.content}}</p><br>
               
             </div>
             
-            <div class="post">
-              <img src="post-image.jpg" alt="Post Image">
-              <h2 class="post-title">Post Title</h2>
-              <p class="post-description">Post description goes here</p>
-              <a href="#" class="read-more">Read More</a>
-            </div>
-            
-            <div class="post">
-              <img src="post-image.jpg" alt="Post Image">
-              <h2 class="post-title">Post Title</h2>
-              <p class="post-description">Post description goes here</p>
-              <a href="#" class="read-more">Read More</a>
-            </div>
           </div>
        
         

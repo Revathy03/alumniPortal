@@ -96,24 +96,24 @@
               <form >
                 <div class="form-group">
                   <label for="name">Title</label>
-                  <input type="text" name="name" />
+                  <input type="text" name="name" [(ngModel)]="title"/>
                 </div>
                 <br>
                 <div class="form-group">
                   <label for="add">Description</label>
-                  <textarea name="address" formControlName="address" id="add" cols="105" rows="10"></textarea>
+                  <textarea name="address"  id="add" cols="105" rows="10" [(ngModel)]="content"></textarea>
                 </div>
                
               
                 <div class="form-group">
                   <label for="image">Image</label>
-                  <input type="file" name="image"/>
+                  <input type="file" name="image" [(ngModel)]="image"/>
                 </div>
                 <br>
                
                 <br><br>
                 
-                <button type="submit" class="btn">Save</button>
+                <button type="submit" class="btn" (click)="postNews()">Post</button>
               </form>
             </div>
           </div>
@@ -125,54 +125,30 @@
     <div><br><br></div>
     
     <div class="post-container">
-      <div class="post">
-        <img src="assets/images/users/user-1.jpg" alt="Post Image">
-        <h2 class="post-title">Post Title</h2>
-        <p class="post-description">Post description goes here</p>
+      <div class="post" *ngFor="let new of news">
+        <img src="assets/images/users/user-1.jpg" alt="new.attributes.image" *ngIf="new.attributes.image" ><br><br>
+        <h2 class="post-title" style="align-content: center;">{{new.attributes.title}}</h2>
+        <p class="post-description">{{new.attributes.content}}</p><br>
         
       </div>
       
-      <div class="post">
-        <img src="post-image.jpg" alt="Post Image">
-        <h2 class="post-title">Post Title</h2>
-        <p class="post-description">Post description goes here</p>
-        <a href="#" class="read-more">Read More</a>
-      </div>
-      
-      <div class="post">
-        <img src="post-image.jpg" alt="Post Image">
-        <h2 class="post-title">Post Title</h2>
-        <p class="post-description">Post description goes here</p>
-        <a href="#" class="read-more">Read More</a>
-      </div>
+    </div>
       
       <!-- Add more posts as needed -->
-    </div>
+
+      <div class="post-container">
+        <div> <h1 style="text-align: center;">Feedbacks</h1><br><br></div>
+
+        <div class="post" *ngFor="let feedback of feedbacks">
+          <h2 class="post-name" style="align-content: left;">{{feedback.attributes.name}}</h2><br>
+          <p class="post-description">{{feedback.attributes.message}}</p><br>
+          
+        </div>
+        
+      </div>
+   
     <br><br>
-    <div class="post-container">
-      <h1 style="align-items:center">Feedbacks</h1><br><br><br>
-      <div class="post">
-        <h2 class="post-title">Post Title</h2>
-        <p class="post-description">Post description goes here</p>
-        
-      </div>
-      
-      <div class="post">
-        <img src="post-image.jpg" alt="Post Image">
-        <h2 class="post-title">Post Title</h2>
-        <p class="post-description">Post description goes here</p>
-        <a href="#" class="read-more">Read More</a>
-      </div>
-      
-      <div class="post">
-        <img src="post-image.jpg" alt="Post Image">
-        <h2 class="post-title">Post Title</h2>
-        <p class="post-description">Post description goes herePost description goes herePost description goes herePost description goes herePost description goes herePost description goes herePost description goes herePost description goes herePost description goes here</p>
-        <a href="#" class="read-more">Read More</a>
-      </div>
-      
-      <!-- Add more posts as needed -->
-    </div>
+    
             </section>
             </body>
             </html> 

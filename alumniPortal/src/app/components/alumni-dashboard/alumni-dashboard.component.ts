@@ -20,27 +20,7 @@ export class AlumniDashboardComponent {
   ngOnInit(){
     this._service.getNews().subscribe(
       (res: any)=>{
-        this.news=res.data;           /* 
-        attributes
-        : 
-        {title: 'alumni meet', content: 'blah blah blah', dateofpost: '2023-03-29', createdAt: '2023-04-13T05:32:48.324Z', updatedAt: '2023-04-13T05:32:48.324Z', …}
-        id
-        : 
-        1
-        [[Prototype]]
-        : 
-        Object
-        1
-        : 
-        attributes
-        : 
-        {title: 'yd', content: 'ydydyd', dateofpost: '2023-04-05', createdAt: '2023-04-14T05:53:25.346Z', updatedAt: '2023-04-14T05:54:07.264Z', …}
-        id
-        : 
-        2
-        [[Prototype]]
-        : 
-        Object*/ 
+        this.news=res.data;              
         console.log(this.news);
         if (res.length === 0) {
           this.nonews=true;
@@ -48,7 +28,7 @@ export class AlumniDashboardComponent {
       }
      )   
      this.id=this._service.uid;
-     this.id=6;
+   //  this.id=6;
     this._service.fetchAlumni(this.id).subscribe(
       (res: any)=>{
         this.user=res;

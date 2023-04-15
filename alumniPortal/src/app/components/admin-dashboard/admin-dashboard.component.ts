@@ -13,12 +13,16 @@ export class AdminDashboardComponent {
   public feedbacks:any;
   id:number=0;
   user:any;
+  title:string|undefined;
+  content:string|undefined;
+  image:File | undefined;
+  post:any;
 
   constructor(private _service:AlumniServicesService , private router:Router){}
 
   ngOnInit(){
     this.id = this._service.uid;
-    this.id=5;
+    //this.id=5;
     this._service.fetchAlumni(this.id).subscribe(
       (res: any) => {
         this.user = res;
@@ -38,10 +42,31 @@ export class AdminDashboardComponent {
 
   }
 
-  public postNews(news:any){
-    this._service.postNews(news).subscribe(
+  public postNews(){
+    if(this.image){
+    this.post={data:{
+      title:this.title,
+      content:this.content,
+      image:this.image
+    }}
+    
+
+    }
+    else{
+      
+        this.post={data:{
+          title:this.title,
+          content:this.content,
+        }}
+       
+    }
+    console.log(this.post);
+    
+    this._service.postNews(this.post).subscribe(
       (res: any)=>{
-        this.router.navigate(['/adm-dashboard'],)
+        this.router.navigateByUrl('/', { skipLocationChange: true }).then(() => {
+          this.router.navigate(['/adm-dashboard']);
+        });
       }
      )     
 
