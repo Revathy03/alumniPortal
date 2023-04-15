@@ -14,7 +14,7 @@ import { RequestListComponent } from './components/request-list/request-list.com
 
 const routes: Routes = [
   {
-    path:'',redirectTo:'',
+    path:'',redirectTo:'home',
     pathMatch:"full" 
 },
 {
@@ -37,6 +37,7 @@ const routes: Routes = [
   path:'contact', 
   component:ContactComponent
 },
+
 {
   path:'adm-dashboard', 
   component:AdminDashboardComponent

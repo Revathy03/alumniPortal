@@ -12,13 +12,7 @@ import { EventsComponent } from './components/events/events.component';
 
 export class AppComponent {
 
-  // @ViewChild(EventsComponent)
-  // eventsComponent!: EventsComponent;
-
-  // @HostListener('window:beforeunload', ['$event'])
-  // handleBeforeUnload(event: BeforeUnloadEvent) {
-  //   this.eventsComponent.ngOnDestroy();
-  // }
+ 
 
   title = 'alumniPortal';
   public members:any;
@@ -28,7 +22,7 @@ export class AppComponent {
 
   ngOnInit(){
 
-    this.router.navigate(['/home'])
+   // this.router.navigate(['/home'])
   }
 
   /*public fetch(){

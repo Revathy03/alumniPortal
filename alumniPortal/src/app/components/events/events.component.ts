@@ -8,13 +8,11 @@ import { AlumniServicesService } from 'src/app/services/alumni-services.service'
   styleUrls: ['./events.component.css']
 })
 export class EventsComponent {
-  ngOnDestroy() {
-    throw new Error('Method not implemented.');
+  
+
+  constructor(private _service:AlumniServicesService , private router:Router){
+   
   }
-  static innerHTML: string;
-
-
-  constructor(private _service:AlumniServicesService , private router:Router){}
 
   public eventspage(){                                //to navigate between pages from nav bar
     this.router.navigate(['/events'],)
