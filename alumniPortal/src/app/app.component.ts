@@ -18,7 +18,7 @@ export class AppComponent {
 
   ngOnInit(){
 
-    this.router.navigate(['/signup'])
+    this.router.navigate(['/home'])
   }
 
   /*public fetch(){

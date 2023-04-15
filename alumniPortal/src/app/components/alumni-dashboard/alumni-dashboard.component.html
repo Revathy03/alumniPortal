@@ -56,7 +56,7 @@
       <div class="profile-details">
         <!--<img src="images/profile.jpg" alt="">-->
         <div class="notify-icon">
-          <img src="assets/images/users/user-1.jpg" class="img-fluid rounded-circle" alt="" />
+          <img src="assets/images/users/profile.png" class="img-fluid rounded-circle" alt="" />
       </div>
         <span class="admin_name" *ngIf="user.name">{{user.name}}</span>
         
@@ -82,7 +82,7 @@
           
           <div class="post-container">
             <div class="post" *ngFor="let new of news">
-              <img src="assets/images/users/user-1.jpg" alt="new.attributes.image" *ngIf="new.attributes.image" ><br><br>
+              <img src="assets/images/users/profile.png" alt="new.attributes.image" *ngIf="new.attributes.image" ><br><br>
               <h2 class="post-title" style="align-content: center;">{{new.attributes.title}}</h2>
               <p class="post-description">{{new.attributes.content}}</p><br>
               

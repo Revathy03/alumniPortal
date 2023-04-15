@@ -51,7 +51,7 @@
       
       <div class="profile-details">
         <!--<img src="images/profile.jpg" alt="">--> <div class="notify-icon">
-          <img src="assets/images/users/user-1.jpg" class="img-fluid rounded-circle" alt="" />
+          <img src="assets/images/users/profile.png" class="img-fluid rounded-circle" alt="" />
         </div>
         <span class="admin_name">{{user.name}}<P></P></span>
       </div>
@@ -63,8 +63,8 @@
 
       <div class="sales-boxes">
         <div class="top-sales box">
-            <div class="box-topic"> <img src="assets/images/users/user-1.jpg" class="rounded-circle avatar-lg img-thumbnail"
-                alt="profile-image">
+            <div class="box-topic"> <img src="assets/images/users/profile.png" class="rounded-circle avatar-lg img-thumbnail"
+                alt="profile-image"><br><br><br>
                 <h4 class="mb-0">{{user.name}}</h4><br>
                 <p class="text-muted mb-2 font-13" *ngIf="user.designation">{{user.designation}}</p>
                 <p class="text-muted mb-2 font-13" *ngIf="user.company">@{{user.company}}</p><br>
@@ -98,11 +98,11 @@
               </div>
               <br>
             
-              <div class="form-group">
+              <!-- <div class="form-group">
                 <label for="image">Image</label>
                 <input type="file" name="image"/>
               </div>
-              <br>
+              <br> -->
   
        <!--     <div class="form-group">
                 <label for="year">Year of Passout</label>

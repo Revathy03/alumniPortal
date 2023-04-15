@@ -55,7 +55,7 @@
           <div class="profile-details">
             <!--<img src="images/profile.jpg" alt="">-->
             <div class="notify-icon">
-              <img src="assets/images/users/user-1.jpg" class="img-fluid rounded-circle" alt="" />
+              <img src="assets/images/users/profile.png" class="img-fluid rounded-circle" alt="" />
           </div>
             <span class="admin_name">{{user.name}}</span>
             
@@ -147,7 +147,7 @@
                 </thead>
                 <tbody>
                   <tr *ngFor="let alumni of alumnis"> 
-                    <td *ngIf="!alumni.admin"><img src="assets/images/users/user-1.jpg" class="img-fluid " alt="" />  {{alumni.name.toUpperCase()}}</td>
+                    <td *ngIf="!alumni.admin"><img src="assets/images/users/profile.png" class="img-fluid " alt="" />  {{alumni.name.toUpperCase()}}</td>
                     
                     <td *ngIf="!alumni.admin"> {{alumni.designation}}</td>
                     <td *ngIf="!alumni.admin"> {{alumni.company}}</td>
