@@ -288,7 +288,9 @@ a{
     width: 100px;
     margin-top: 16px;
   }
-  
+  a:hover{
+    cursor:pointer
+}
 
   .form button {
     font-family: "Roboto", sans-serif;

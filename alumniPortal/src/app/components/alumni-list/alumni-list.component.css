@@ -4,6 +4,7 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+
 .sidebar{
   position: fixed;
   height: 100%;
@@ -547,5 +548,44 @@ table {
     padding: 5px;
     font-size: 14px;
   }
+
+  #contact .form-group{
+    margin-bottom: 20px;
+}
+
+.contact-form label{
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact-form input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+
+}
+.contact-form select{
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+#contact textarea{
+    height: 200px;
+    width: 100%;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+    outline: none;
+    border-color: #265ede;
+}
+.recent-sales{
+  width: 65%;
+  background: #fff;
+  padding: 20px 30px;
+  margin: 0 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
 }
 

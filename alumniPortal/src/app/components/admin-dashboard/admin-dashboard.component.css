@@ -452,3 +452,42 @@ nav .profile-details i{
   transition: all 0.3s ease;
 
 }
+
+#contact h3 span{
+  background: #ddd;
+  padding: 10px 22px;
+  color: #333;
+  text-align: center;
+  display: inline-block;
+}
+
+#contact .form-group{
+  margin-bottom: 20px;
+}
+
+.contact-form label{
+  display: block;
+  margin-bottom: 5px;
+}
+
+.contact-form input{
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+
+}
+.contact-form select{
+width: 100%;
+padding: 10px;
+border: 1px solid #ddd;
+}
+#contact textarea{
+  height: 200px;
+  width: 120%;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+  outline: none;
+  border-color: #265ede;
+}

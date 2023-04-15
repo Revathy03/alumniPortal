@@ -11,10 +11,20 @@ export class AdminDashboardComponent {
 
   public news:any;
   public feedbacks:any;
+  id:number=0;
+  user:any;
 
   constructor(private _service:AlumniServicesService , private router:Router){}
 
   ngOnInit(){
+    this.id = this._service.uid;
+    this.id=5;
+    this._service.fetchAlumni(this.id).subscribe(
+      (res: any) => {
+        this.user = res;
+        this.user.name=this.user.name.toUpperCase()
+      }
+    );
     this._service.getNews().subscribe(
       (res: any)=>{
         this.news=res.data;
