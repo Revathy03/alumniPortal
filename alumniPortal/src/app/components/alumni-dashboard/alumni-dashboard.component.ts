@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router , ActivatedRoute} from '@angular/router';
 import { AlumniServicesService } from 'src/app/services/alumni-services.service';
 
 @Component({
@@ -11,13 +11,19 @@ export class AlumniDashboardComponent {
 
   public news:any;
 
-  constructor(private _service:AlumniServicesService , private router:Router){}
+  constructor(private _service:AlumniServicesService , private router:Router, private route: ActivatedRoute){}
 
-  id:number=0;
+  id:number|undefined;
   user:any;
   nonews=false;
 
   ngOnInit(){
+     
+
+  // if user is not authorized, navigate to login page
+  if (!this._service.uid) {
+    this.router.navigate(['/home']);
+  }
     this._service.getNews().subscribe(
       (res: any)=>{
         this.news=res.data;              

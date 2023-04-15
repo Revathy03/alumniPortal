@@ -10,11 +10,14 @@ import { AlumniServicesService } from 'src/app/services/alumni-services.service'
 export class AlumniListComponent {
 
   public user:any;
-  public id:number=0;
+  public id:number|undefined;
   public  alumnis:any
   constructor(private _service:AlumniServicesService , private router:Router){}
 
   ngOnInit(){
+    if (!this._service.uid) {
+      this.router.navigate(['/home']);
+    }
     this.id = this._service.uid;
     this._service.fetchAlumni(this.id).subscribe(
       (res: any) => {

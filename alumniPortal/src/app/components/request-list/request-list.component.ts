@@ -11,12 +11,15 @@ export class RequestListComponent {
 
   public reqs:any;
   public user:any;
-  public id:number=0;
+  public id:number|undefined;
   public data1:any;
 
   constructor(private _service:AlumniServicesService , private router:Router){}
 
   ngOnInit(){
+    if (!this._service.uid) {
+      this.router.navigate(['/home']);
+    }
     this.id = this._service.uid;
    this.id=6;
     this._service.fetchAlumni(this.id).subscribe(

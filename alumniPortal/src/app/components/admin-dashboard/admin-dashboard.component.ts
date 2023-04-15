@@ -11,7 +11,7 @@ export class AdminDashboardComponent {
 
   public news:any;
   public feedbacks:any;
-  id:number=0;
+  id:number|undefined;
   user:any;
   title:string|undefined;
   content:string|undefined;
@@ -21,6 +21,9 @@ export class AdminDashboardComponent {
   constructor(private _service:AlumniServicesService , private router:Router){}
 
   ngOnInit(){
+    if (!this._service.uid) {
+      this.router.navigate(['/home']);
+    }
     this.id = this._service.uid;
     //this.id=5;
     this._service.fetchAlumni(this.id).subscribe(

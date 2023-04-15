@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 export class AlumniServicesService {
 
 public token:any|undefined;
-public uid:number=0;
+public uid:number|undefined;
 
   constructor(private _http:HttpClient) { }
 
@@ -55,7 +55,7 @@ public uid:number=0;
     return this._http.get(this.publishUrl)  ; 
   }
 
-  public editUser(data:any, id:number):any{
+  public editUser(data:any, id:number|undefined):any{
     return this._http.put(this.userUrl+'/'+id,data) ;  
   }
 

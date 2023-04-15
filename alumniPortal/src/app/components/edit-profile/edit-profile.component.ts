@@ -10,12 +10,15 @@ import { AlumniServicesService } from 'src/app/services/alumni-services.service'
 })
 export class EditProfileComponent {
   user:any;
-  id:number=0;
+  id:number|undefined;
   registrationForm!: FormGroup;
 
   constructor(private _service:AlumniServicesService , private router:Router,private fb: FormBuilder){}
   
   ngOnInit(){
+    if (!this._service.uid) {
+      this.router.navigate(['/home']);
+    }
     this.id=this._service.uid;
     this.id=6;
     this._service.fetchAlumni(this.id).subscribe(
