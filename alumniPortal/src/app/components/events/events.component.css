@@ -10,15 +10,15 @@ body {
   width: 100%;
   font-family: 'Poppins';
   font-size: 16px;
-  background: #eee;
-  color: #777;
+  /* background: #eee; */
+  /* color: #777; */
   /* display: flex; */
   justify-content: center;
   align-items: center;
 }
 
 #navbar{
-  background:#4d0099;
+  /* background:#4d0099; */
   overflow: auto;
 
 }
@@ -52,11 +52,11 @@ body {
 }
 
 #navbar ul li a:hover{
-background: #4397EA;
+/* background: #4397EA; */
 transition: all 0.5s;
 }
 #navbar ul li a.current{
-  background: #4d009A;
+  /* background: #4d009A; */
   transition: all 0.5s;
 }
 
@@ -71,17 +71,16 @@ a{
 }
 .container1{
   max-width: 1100px;
-  margin:auto;
-  
-
+  margin:auto; 
 }
 .container {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: wrap;  
 }
+
 a:hover{
   cursor:pointer
 }
@@ -89,12 +88,17 @@ a:hover{
 .item-container {
   position: relative;
   margin: 24px;
-  width: 320px;
-  height: 570px;
+  /* width: 320px; */
+  width: 37%;
+  height: 540px;
   overflow: hidden;
-  background-color: #fff;
+  /* background-color: #f54d4dfd; */
   box-shadow: 0 0 30px 5px rgba(0, 0, 0, 0.15);
   cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
+  padding-right: 0px;
+  align-items: center;
 }
 
 .img-container,
@@ -118,7 +122,7 @@ a:hover{
   position: relative;
   width: 100%;
   height: 400px;
-  background-color: rgba(24, 83, 122, 0.6);
+  background-color: rgba(0, 0, 0, 0.6);
   opacity: 0;
   transition: height linear 0.4s, opacity linear 0.2s;
 }
@@ -129,17 +133,18 @@ a:hover{
 }
 
 .event-info {
-  background-color: #fff;
+  background-color: #000000;
+  color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 8px;
+  /* padding: 8px; */
 }
 
 .title,
 .price {
-  color: #18537a;
+  color: #eeff00;
   font-size: 1.5em;
   font-weight: bold;
   letter-spacing: 1px;
@@ -151,15 +156,15 @@ a:hover{
   margin-bottom: 6px;
 }
 
-.separator {
+/* .separator {
   width: 20%;
-  height: 6px;
-  background-color: #17537a;
-  margin-bottom: 16px;
-}
+  height: 2px;
+  background-color: #fcfcfc;
+  margin-bottom: 6px;
+} */
 
 .additional-info {
-  border-top: 1px solid #bbb;
+  border-top: 1px solid #ffffff;
   margin-top: 12px;
   padding: 28px;
   padding-bottom: 0;
@@ -172,7 +177,7 @@ a:hover{
 }
 
 .info i {
-  color: #18537a;
+  color: #fffb02;
   font-size: 1.1em;
   margin-right: 4px;
 }
@@ -218,7 +223,9 @@ a:hover{
 	display: inline-block;
 	position: relative;
 	vertical-align: top;
-	background: #fff;
+  color: #eeff00;
+  font-weight:100;
+	background: #000000bb;
 	-webkit-box-shadow: 0 0 3px rgba(0,0,0,0.15),-1px 0 0 rgba(0,0,0,0.03), 1px 0 1px rgba(0,0,0,0.03),0 1px 0 rgba(0,0,0,0.12);
 	-moz-box-shadow: 0 0 3px rgba(0,0,0,0.15),-1px 0 0 rgba(0,0,0,0.03), 1px 0 1px rgba(0,0,0,0.03),0 1px 0 rgba(0,0,0,0.12);
 	box-shadow: 0 0 3px rgba(0,0,0,0.15),-1px 0 0 rgba(0,0,0,0.03), 1px 0 1px rgba(0,0,0,0.03),0 1px 0 rgba(0,0,0,0.12);
@@ -229,8 +236,8 @@ a:hover{
 
 .event-block .calendar-block {
 	float: left;
-	background: #1A064E;
-	color: #fff;
+	background: #ffffffbb;
+	color: #000000;
 	width: 12rem;
 	height: 100%;
 	padding: 2.5rem 0.5rem;
@@ -256,10 +263,11 @@ a:hover{
 	text-overflow: ellipsis;
 	overflow: hidden;
 	white-space: nowrap;
-	color: #1A064E;
+	color: #ffffff;
 	font-size: 1.6rem;
 	font-weight: bold;
 	padding: 1rem;
+  background-color: #000000b2;
 }
 .event_details_extra{
   padding: 0 0.5rem;
@@ -301,10 +309,10 @@ a:hover{
 
 /* Footer */
 
-#main-footer{
-  background: #4d009A;
+/* #main-footer{
+  background: #4d009a00;
   padding: 20px;
   margin-top: 20px;
   text-align: center;
   color:#fff;
-}
+} */

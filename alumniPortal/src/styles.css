@@ -9,8 +9,8 @@
     height: 100px;
     width: 100px;
 }
-#navvbar{
-    background:#4d0099;
+#navvbar{  
+    /* background:#4d0099; */
     overflow: auto;
 }
 
@@ -41,16 +41,16 @@
 }
 
 #navbar ul li a:hover{
-  background: #4397EA;
+  background: #eeff00a9;
   transition: all 0.5s;
 }
 #navbar ul li a.current{
-    background: #4d009A;
+    /* background: #4d009A; */
     transition: all 0.5s;
 }
 a{
     text-decoration: none;
-    color: #fff;
+    color: #000000;
 }
 
 a:hover{
@@ -62,13 +62,50 @@ a:hover{
   
 }
 #navbar{
-    background:#4d0099;
+    background:#00000085;
     overflow: auto;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    font-size: large;
+    /* font-weight: bold; */
 }
 
 body{
     font-family: 'Poppins';
     line-height: 1.7em;
-      
+    background: url('assets/images/home.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    height: 600px;
+    /* color: #fff; */
+    /* opacity: 0.8; */
+}
+
+/* Default styles for all screen sizes */
+body {
+    font-size: 16px;
+  }
+  
+  /* Styles for screens with a max width of 768px (i.e. tablets and smaller) */
+  @media (max-width: 768px) {
+    body {
+      font-size: 14px;
+    }
+  }
+  
+  /* Styles for screens with a max width of 480px (i.e. smartphones) */
+  @media (max-width: 480px) {
+    body {
+      font-size: 12px;
+    }
+  }
+  #main-footer{
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+    color:#fff;
 
 }
