@@ -145,7 +145,7 @@
       <!-- <div id="showcase">
         <div class="container">-->
           <div class="showcase-content">
-            <h2>SIGN UP</h2>
+            <h2 style="text-align: center;text-shadow: 1px 1px 0px rgb(0, 0, 0), 2px 2px 0px rgb(0, 0, 0); padding: 10px;">Sign up</h2>
           </div>
         <!-- </div>
       </div> -->
@@ -154,50 +154,50 @@
     <!-- Contact -->
 <div id="contact">
     <div class="container">
-        <h3><span>SIGN UP</span></h3>
+        <!-- <h3><span>SIGN UP</span></h3> -->
         <div class="contact-form">
           <form [formGroup]="registrationForm" (ngSubmit)="registrationForm.valid && onSubmit(registrationForm.value)">
-            <div class="form-group">
+            <div class="form-group" style="color: white;">
               <label for="name">Name</label>
               <input type="text" name="name" formControlName="name"/>
             </div>
             <div class="alert alert-danger" *ngIf="registrationForm.get('name')?.hasError('required') && registrationForm.get('name')?.touched">
               Please enter a valid name!
           </div>
-            <div class="form-group">
+            <div class="form-group" style="color: white;">
               <label for="email">Email</label>
               <input type="email" name="email" formControlName="email" id="email"/>
             </div>
             <div class="alert alert-danger" *ngIf=" registrationForm.get('email')?.touched && registrationForm.get('email')?.invalid">
               Please enter a valid email!    
           </div>
-            <div class="form-group">
+            <div class="form-group" style="color: white;">
               <label for="password">Password</label>
               <input type="password" name="password" formControlName="password" id="password"/>
             </div>
             <div class="alert alert-danger" *ngIf="registrationForm.get('password')?.invalid && registrationForm.get('password')?.touched">
               Please enter a valid password, minimum 8 characters!
           </div>
-            <div class="form-group">
+            <div class="form-group" style="color: white;">
               <label for="Contact">Contact</label>
               <input type="Contact" name="Contact" formControlName="contact"/>
             </div>
             <div class="alert alert-danger" *ngIf="registrationForm.get('contact')?.hasError('required') && registrationForm.get('contact')?.touched">
               Please enter a valid contact!
           </div>
-            <div class="form-group">
+            <div class="form-group" style="color: white;">
               <label for="image">Image</label>
               <input type="file" name="image"/>
             </div>
 
-            <div class="form-group">
+            <div class="form-group" style="color: white;">
               <label for="year">Year of Passout</label>
               <input type="date" name="yop" formControlName="yop"/>
             </div>
             <div class="alert alert-danger" *ngIf="registrationForm.get('yop')?.hasError('required') && registrationForm.get('yop')?.touched">
               Please enter your year of passout!
           </div>
-            <div class="form-group">
+            <div class="form-group" style="color: white;">
               <label for="course">Course</label>
               <select name="course" formControlName="course">
                 <option>BTech</option>
@@ -209,7 +209,7 @@
               Please select your course!
           </div>
 
-            <div class="form-group">
+            <div class="form-group" style="color: white;">
               <label for="dept">Department</label>
               <select name="department" formControlName="department">
                 <option>CS</option>
@@ -223,24 +223,26 @@
               Please select your department!
           </div>
 
-            <div class="form-group">
+            <div class="form-group" style="color: white;">
               <label for="design">Designation</label>
               <input type="text" name="designation" formControlName="designation"/>
             </div>
 
-            <div class="form-group">
+            <div class="form-group" style="color: white;">
               <label for="comp">Company</label>
               <input type="text" name="Company" formControlName="company"/>
             </div>
 
-            <div class="form-group">
+            <div class="form-group" style="color: white;border-radius: 10px;">
               <label for="add">Address</label>
               <textarea name="address" formControlName="address" id="add" cols="30" rows="10"></textarea>
             </div>
             <div class="alert alert-danger" *ngIf="registrationForm.get('address')?.hasError('required') && registrationForm.get('address')?.touched">
                 Please enter your address!
             </div>
+            <div class="form-group">
             <button type="submit" class="btn">Submit</button>
+          </div>
           </form>
           <div class="notification" *ngIf="showNotification">
             <p><b>Your data has been recorded!</b></p>

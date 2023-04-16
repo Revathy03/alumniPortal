@@ -42,22 +42,22 @@
   <!-- Contact -->
     <div id="contact">
       <div class="container1">
-        <h3 style="font-size: xx-large;"><span>FEEDBACK</span></h3>
+        <h3 style="font-size: xx-large;text-align: center;"><span>FEEDBACK</span></h3>
         <div class="contact-form">
           <form action="process.php">
-            <div class="form-group" style="color: 000000;">
+            <div class="form-group" style="color: rgb(255, 255, 255);">
               <label for="name">Name</label>
               <input type="text" name="name" [(ngModel)]="name" required />
             </div>
-            <div class="form-group"  style="color: 000000;">
+            <div class="form-group"  style="color: rgb(255, 255, 255);">
               <label for="email">Email</label>
               <input type="email" name="email" [(ngModel)]="email" required email/>
             </div> 
-            <div class="form-group" style="color: 000000;">
+            <div class="form-group" style="color: rgb(255, 255, 255);">
               <label for="message">Message</label>
               <textarea name="message" id="message" cols="30" rows="10" [(ngModel)]="msg" required></textarea>
-            </div>
-            <button type="button" class="btn" (click)="feedback()">Submit</button>
+            </div><div class="form-group">
+            <button type="button" class="btn" (click)="feedback()">Submit</button></div>
             <div class="invalid" *ngIf="errorMessage">
               {{errorMessage}}
               </div>
