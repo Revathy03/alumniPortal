@@ -59,24 +59,14 @@ export class SignupComponent {
 
   }
   public onSubmit(data:any){
-    const fd=new FormData();
-    for (const key in data) {
-      if (data.hasOwnProperty(key)) {
-        const value = data[key];
-        fd.append(key, value);
-      }
-    }
-    console.log(fd);
-    //data.append('image',this.selectedFile,this.selectedFile?.name);
-    // data.image=this.selectedFile;
-    // console.log(data);
-    // data = { "data": data };
-    // this._service.addMemberReq(data).subscribe(
-    //   (res: any)=>{
+   
+    data = { "data": data };
+    this._service.addMemberReq(data).subscribe(
+      (res: any)=>{
         
-    //   }
-    //  )     
-    //  this.showNotification = true;
+      }
+     )     
+     this.showNotification = true;
 
   }
 
