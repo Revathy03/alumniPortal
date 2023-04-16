@@ -40,7 +40,7 @@ a:hover{
 }
 
 .btn{
-    display: inline-block;
+    /* display: inline-block;
     padding: 07px 16px;
     background: #4d009A;
     border: none;
@@ -48,7 +48,22 @@ a:hover{
     font-size: 16px;
     border-radius: 03px;
     color:#fff;
+    transition: all 0.3; */
+    display: flex;
+    background: rgba(229, 255, 0, 0.521);
+    border: none;
+    font-size: 16px;
+    color:#fff;
     transition: all 0.3;
+    padding: 10px 20px;
+    margin-left: 45%;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+.btn:hover{
+    background: #a70000;
 }
 
 .clr{
@@ -58,7 +73,7 @@ a:hover{
 /* Close Utality Classes */
 
 #navbar{
-    background: #4d009A;
+    /* background: #4d009A; */
     overflow: auto;
 }
 
@@ -85,7 +100,7 @@ a:hover{
 
 #navbar ul li a:hover,
 #navbar ul li a.current{
-    background: #4397EA;
+    /* background: #4397EA; */
     transition: all 0.5s;
 }
 
@@ -99,7 +114,11 @@ a:hover{
 
 .showcase-content{
     padding-top: 100px;
-    color: #333;
+    color: #fffefe;
+    /* text-shadow: #4d009A; */
+    font-size: 50px;
+   line-height: 1.9em;
+   text-align: center;
 }
 
 .showcase-content h2{
@@ -217,24 +236,32 @@ a:hover{
 }
 
 /* Contact Us */
-#contact h3{
+#contact{
+    background-color: #00000083;
+    border-radius: 10px;
+    width: auto;
+    
+}
+/* #contact h3{
     width: 100%;
-    border-bottom: 0.5px solid #ddd;;
     margin-bottom: 35px;
     margin-top: 100px;
-}
+
+} */
 
 #contact h3 span{
   
     background: #ddd;
     padding: 10px 22px;
-    color: #333;
+    color: #000000;
     text-align: center;
     display: inline-block;
 }
 
 #contact .form-group{
     margin-bottom: 20px;
+    border-radius: 10px;  
+    padding: 10px;
 }
 
 .contact-form label{
@@ -245,7 +272,13 @@ a:hover{
 .contact-form input{
     width: 100%;
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid #000000;
+    padding: 10px 0px 20px 0px;
+        /* text-align: center; */
+        /* color: #ffffff; */
+        /* font-size: 35px; */
+        border-radius: 10px;
+    
 }
 
 #contact textarea{
@@ -256,19 +289,23 @@ a:hover{
 .contact-form input:focus,
 .contact-form textarea:focus{
     outline: none;
-    border-color: #4d009A;
+    /* border-color: #4d009A; */
+    padding: 10px 0px 20px 0px;
+        /* text-align: center; */
+        /* color: #ffffff; */
+        /* font-size: 35px; */
 }
 
 
 /* Footer */
 
-#main-footer{
+/* #main-footer{
     background: #4d009A;
     padding: 10px;
     margin-top: 1000px;
     text-align: center;
     color:#fff;
-}
+} */
 
 .invalid{
     text-align: center;

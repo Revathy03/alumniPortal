@@ -34,7 +34,7 @@
       <!-- <div id="showcase">
         <div class="container"> -->
           <div class="showcase-content">
-            <h2 style="text-align: center; " >Sign In</h2>
+            <h2 style="text-align: center;text-shadow: 1px 1px 0px rgb(0, 0, 0), 2px 2px 0px rgb(0, 0, 0); padding: 10px;" >Sign In</h2>
           </div>
         <!-- </div>
       </div> -->
@@ -46,19 +46,19 @@
      <!-- Contact -->
     <div id="contact">
       <div class="container">
-        <h3><span>SIGN-IN</span></h3>
+        <!-- <h3><span>SIGN-IN</span></h3> -->
         <div class="contact-form">
           <form action="process.php">
-            <div class="form-group">
+            <div class="form-group" style="color: white;">
               <label for="email">Email-id</label>
               <input type="email" name="email" [(ngModel)]="identifier" required />
             </div>
-            <div class="form-group">
+            <div class="form-group" style="color: white;">
               <label for="password">Password</label>
               <input type="password" name="password" [(ngModel)]="password" required  />
-            </div>
-            <button type="submit" (click)="logIn()" class="btn">Sign-in</button>
-          </form>
+            </div> <div class="form-group">
+            <button type="submit" (click)="logIn()" class="btn" style="align-items: center;">Sign-in</button>
+          </div> </form>
           <div class="invalid" *ngIf="errorMessage">
             {{errorMessage}}
             </div>

@@ -26,8 +26,9 @@ a{
 .container1{
     max-width: 1100px;
     margin:auto;
-    background-color: #ffffffbb;
+    background-color: #0000008e;
     border-radius: 10px;
+    color: #fff;
 
 }
 
@@ -42,7 +43,8 @@ a{
    
     /* padding: 07px 16px; */
     /* background: rgba(229, 255, 0, 0.911); */
-    background: #000000d2;
+    
+    background: rgba(229, 255, 0, 0.521);
     border: none;
     /* cursor: pointer; */
     font-size: 16px;
@@ -57,7 +59,7 @@ a{
     transition: background-color 0.3s ease-in-out;
 }
 .btn:hover{
-    background: rgba(229, 255, 0, 0.521);
+    background: #a70000;
 }
 
 
@@ -198,7 +200,7 @@ a{
  #authors h3 span{
     background: #ddd;
     padding: 10px 22px;
-    color: #333;
+    color: #333333;
     text-align: center;
     display: inline-block;
  }
@@ -241,7 +243,7 @@ a{
     text-shadow: #000000;
     text-size-adjust:inherit;
     padding: 22px 22px;
-    color: #000000;
+    color: #ffffff;
     text-align: center;
     display: inline-block;
 }
@@ -263,6 +265,7 @@ a{
     width: 100%;
     padding: 10px;
     border: 1px solid #00000086;
+    border-radius: 10px;
 }
 
 #contact textarea{
@@ -270,6 +273,7 @@ a{
     width: 100%;
     align-items: center;
     border: 1px solid #00000086;
+    border-radius: 10px;
 }
 
 .contact-form input:focus,
@@ -277,6 +281,7 @@ a{
     outline: none;
     border-color: #00000086;
     display: inline-flex;
+   
 }
 
 

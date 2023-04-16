@@ -168,16 +168,23 @@ a{
 }
 
 .btn{
-    display: inline-block;
-    padding: 07px 16px;
-    background: #4d009A;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 03px;
-    color:#fff;
-    transition: all 0.3;
+  display: flex;
+  background: rgba(229, 255, 0, 0.521);
+  border: none;
+  font-size: 16px;
+  color:#fff;
+  transition: all 0.3;
+  padding: 10px 20px;
+  margin-left: 45%;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
 }
+.btn:hover{
+  background: #a70000;
+}
+
 ul:hover{
   cursor:pointer
 }
@@ -189,7 +196,7 @@ ul:hover{
 /* Close Utality Classes */
 
 #navbar{
-  background: #4d009A;
+  /* background: #4d009A; */
   overflow: auto;
 }
 
@@ -216,7 +223,7 @@ ul:hover{
 
 #navbar ul li a:hover,
 #navbar ul li a.current{
-    background: #4397EA;
+    /* background: #4397EA; */
     transition: all 0.5s;
 }
 
@@ -229,8 +236,11 @@ ul:hover{
 }
 
 .showcase-content{
-    padding-top: 170px;
-    color: #333;
+  padding-top: 100px;
+  color: #fffefe;
+  font-size: 50px;
+ line-height: 1.9em;
+ text-align: center;
 }
 
 .showcase-content h2{
@@ -349,22 +359,32 @@ ul:hover{
 }
 
 /* Contact Us */
-#contact h3{
+#contact{
+  background-color: #00000083;
+  border-radius: 10px;
+  width: auto;
+  
+}
+/* #contact h3{
     width: 100%;
     border-bottom: 0.5px solid #ddd;;
     margin-bottom: 35px;
-}
+} */
 
-#contact h3 span{
-    background: #ddd;
-    padding: 10px 22px;
-    color: #333;
-    text-align: center;
-    display: inline-block;
-}
+/* #contact h3 span{
+  background: #ddd;
+  padding: 10px 22px;
+  color: #000000;
+  text-align: center;
+  display: inline-block;
+} */
 
 #contact .form-group{
-    margin-bottom: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;  
+  padding: 10px;
+  font-size: large;
+  
 }
 
 .contact-form label{
@@ -373,25 +393,31 @@ ul:hover{
 }
 
 .contact-form input{
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-
+  width: 100%;
+  padding: 10px;
+  /* border: 1px solid #000000; */
+  /* padding: 10px 0px 20px 0px; */
+      border-radius: 10px;
+      font-size: large;
 }
 .contact-form select{
   width: 100%;
   padding: 10px;
-  border: 1px solid #ddd;
+  /* border: 1px solid #ddd; */
+  border-radius: 10px;
+  font-size: large;
 }
 #contact textarea{
     height: 200px;
     width: 100%;
+    border-radius: 10px;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus{
-    outline: none;
-    border-color: #265ede;
+  outline: none;
+  padding: 10px 0px 20px 0px;
+  border-radius: 10px;
 }
 
 .alert-danger {
@@ -428,10 +454,10 @@ ul:hover{
 
 /* Footer */
 
-#main-footer{
+/* #main-footer{
     background: #4d009A;
     padding: 20px;
     margin-top: 20px;
     text-align: center;
     color:#fff;
-}
+} */
