@@ -109,3 +109,71 @@ body {
     color:#fff;
 
 }
+
+.sidebar{
+    position: absolute;
+    /* height: 1160px; */
+    min-height: 100vh;
+    width: 233px;
+    background: #000000d5;
+    transition: all 0.5s ease;
+  }
+
+  .sidebar .nav-links li a.active{
+    background: #a5a5a5cc;
+  }
+  .sidebar .nav-links li a:hover{
+    background: #fffb00ab;
+  }
+  .home-section{
+    position:sticky;
+    background: #ffffffe1;
+    min-height: 100vh;
+    width: calc(100% - 240px);
+    left: 240px;
+    transition: all 0.5s ease;
+  }
+  .home-section nav{
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    background: #fbff1bb9;
+    display: flex;
+    align-items: center;
+    /* position: fixed; */
+    /* width: calc(100% - 240px); */
+    left: 240px;
+    z-index: 100;
+    padding: 20px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s ease;
+  }
+  .home-section nav .profile-details{
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    border: 2px solid #EFEEF1;
+    border-radius: 6px;
+    height: 50px;
+    min-width: 190px;
+    padding: 0 15px 0 2px;
+  }
+  nav .profile-details img{
+    height: 40px;
+    width: 40px;
+    border-radius: 6px;
+    object-fit: cover;
+    display: flex;
+   
+  }
+  nav .profile-details .admin_name{
+    font-size: 15px;
+    font-weight: 500;
+    color: #000000;
+    margin: 0 10px;
+    white-space: nowrap;
+  }
+  nav .profile-details i{
+    font-size: 25px;
+    color: #000000;
+  }

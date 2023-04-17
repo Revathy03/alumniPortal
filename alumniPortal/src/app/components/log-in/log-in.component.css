@@ -241,61 +241,64 @@ a:hover{
     border-radius: 10px;
     width: auto;
     
-}
-/* #contact h3{
-    width: 100%;
-    margin-bottom: 35px;
-    margin-top: 100px;
-
-} */
-
-#contact h3 span{
+  }
+  /* #contact h3{
+      width: 100%;
+      border-bottom: 0.5px solid #ddd;;
+      margin-bottom: 35px;
+  } */
   
+  /* #contact h3 span{
     background: #ddd;
     padding: 10px 22px;
     color: #000000;
     text-align: center;
     display: inline-block;
-}
-
-#contact .form-group{
+  } */
+  
+  #contact .form-group{
     margin-bottom: 20px;
     border-radius: 10px;  
     padding: 10px;
-}
-
-.contact-form label{
-    display: block;
-    margin-bottom: 5px;
-}
-
-.contact-form input{
+    font-size: large;
+    color: #fff;
+    
+  }
+  
+  .contact-form label{
+      display: block;
+      margin-bottom: 5px;
+  }
+  
+  .contact-form input{
     width: 100%;
     padding: 10px;
-    border: 1px solid #000000;
-    padding: 10px 0px 20px 0px;
-        /* text-align: center; */
-        /* color: #ffffff; */
-        /* font-size: 35px; */
+    /* border: 1px solid #000000; */
+    /* padding: 10px 0px 20px 0px; */
         border-radius: 10px;
-    
-}
-
-#contact textarea{
-    height: 200px;
+        font-size: large;
+  }
+  .contact-form select{
     width: 100%;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus{
+    padding: 10px;
+    /* border: 1px solid #ddd; */
+    border-radius: 10px;
+    font-size: large;
+  }
+  #contact textarea{
+      height: 200px;
+      width: 100%;
+      border-radius: 10px;
+      
+  }
+  
+  .contact-form input:focus,
+  .contact-form textarea:focus{
     outline: none;
-    /* border-color: #4d009A; */
     padding: 10px 0px 20px 0px;
-        /* text-align: center; */
-        /* color: #ffffff; */
-        /* font-size: 35px; */
-}
-
+    border-radius: 10px;
+    
+  }
 
 /* Footer */
 
