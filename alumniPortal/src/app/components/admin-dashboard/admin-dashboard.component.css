@@ -6,7 +6,7 @@
   font-family: 'Poppins', sans-serif;
 }
 .sidebar{
-  position: absolute;
+  position: fixed;
   height: 1160px;
   width: 233px;
   background: #000000d5;
@@ -32,8 +32,12 @@
   font-size: 24px;
   font-weight: 500;
 }
+.navbar{
+  position: fixed;
+}
 .sidebar .nav-links{
   margin-top: 10px;
+  /* position: fixed; */
 }
 .sidebar .nav-links li{
   position: relative;
@@ -67,7 +71,7 @@
   white-space: nowrap;
 }
 .sidebar .nav-links .log_out{
-  position: absolute;
+  position: relative;
   bottom: 0;
   width: 100%;
 }
