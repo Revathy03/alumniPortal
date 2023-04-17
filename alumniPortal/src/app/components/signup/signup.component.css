@@ -182,7 +182,7 @@ a{
   transition: background-color 0.3s ease-in-out;
 }
 .btn:hover{
-  background: #a70000;
+  background: #2e2525d5;
 }
 
 ul:hover{
@@ -360,7 +360,7 @@ ul:hover{
 
 /* Contact Us */
 #contact{
-  background-color: #00000083;
+  background-color: #000000d5;
   border-radius: 10px;
   width: auto;
   

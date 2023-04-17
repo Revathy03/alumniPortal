@@ -63,7 +63,7 @@ a:hover{
     transition: background-color 0.3s ease-in-out;
 }
 .btn:hover{
-    background: #a70000;
+    background: #443d3dc2;
 }
 
 .clr{
@@ -237,7 +237,7 @@ a:hover{
 
 /* Contact Us */
 #contact{
-    background-color: #00000083;
+    background-color: #000000d5;
     border-radius: 10px;
     width: auto;
     
@@ -313,4 +313,6 @@ a:hover{
 .invalid{
     text-align: center;
     color: red;
+    font-size: large;
+    text-shadow: 1px 1px 0px rgb(0, 0, 0), 2px 2px 0px rgb(0, 0, 0);
   }
