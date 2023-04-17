@@ -17,9 +17,9 @@ export class RequestListComponent {
   constructor(private _service:AlumniServicesService , private router:Router){}
 
   ngOnInit(){
-    if (!this._service.uid) {
-      this.router.navigate(['/home']);
-    }
+    // if (!this._service.uid) {
+    //   this.router.navigate(['/home']);
+    // }
     this.id = this._service.uid;
    this.id=6;
     this._service.fetchAlumni(this.id).subscribe(

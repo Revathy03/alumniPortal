@@ -21,9 +21,9 @@ export class AlumniDashboardComponent {
      
 
   // if user is not authorized, navigate to login page
-  if (!this._service.uid) {
-    this.router.navigate(['/home']);
-  }
+  // if (!this._service.uid) {
+  //   this.router.navigate(['/home']);
+  // }
     this._service.getNews().subscribe(
       (res: any)=>{
         this.news=res.data;              
