@@ -6,11 +6,12 @@
   font-family: 'Poppins', sans-serif;
 }
 .sidebar{
-  position: fixed;
+  /* position: fixed;
   height: 100%;
   width: 240px;
   background: #0A2558;
-  transition: all 0.5s ease;
+  transition: all 0.5s ease; */
+  height: 1072px;
 }
 .sidebar.active{
   width: 60px;
@@ -48,12 +49,12 @@
   text-decoration: none;
   transition: all 0.4s ease;
 }
-.sidebar .nav-links li a.active{
+/* .sidebar .nav-links li a.active{
   background: #081D45;
 }
 .sidebar .nav-links li a:hover{
   background: #081D45;
-}
+} */
 .sidebar .nav-links li i{
   min-width: 60px;
   text-align: center;
@@ -71,19 +72,19 @@
   bottom: 0;
   width: 100%;
 }
-.home-section{
+/* .home-section{
   position: relative;
   background: #f5f5f5;
   min-height: 100vh;
   width: calc(100% - 240px);
   left: 240px;
   transition: all 0.5s ease;
-}
+} */
 .sidebar.active ~ .home-section{
   width: calc(100% - 60px);
   left: 60px;
 }
-.home-section nav{
+/* .home-section nav{
   display: flex;
   justify-content: space-between;
   height: 80px;
@@ -97,7 +98,7 @@
   padding: 0 20px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   transition: all 0.5s ease;
-}
+} */
 .sidebar.active ~ .home-section nav{
   left: 60px;
   width: calc(100% - 60px);
@@ -261,11 +262,12 @@ nav .profile-details i{
 /* left box */
 .home-content .sales-boxes .recent-sales{
   width: 65%;
-  background: #fff;
+  background: #ffffff;
   padding: 20px 30px;
   margin: 0 20px;
   border-radius: 12px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+ 
 }
 .home-content .sales-boxes .sales-details{
   display: flex;
@@ -313,11 +315,11 @@ nav .profile-details i{
 /* Right box */
 .home-content .sales-boxes .top-sales{
   width: 35%;
-  background: #fff;
+  /* background: #ffffff; */
   padding: 20px 30px;
-  margin: 0 20px 0 0;
+  /* margin: 0 20px 0 0; */
   border-radius: 12px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); */
 }
 .sales-boxes .top-sales li{
   display: flex;
@@ -466,17 +468,19 @@ nav .profile-details i{
 
 #contact .form-group{
     margin-bottom: 20px;
+    
 }
 
 .contact-form label{
     display: block;
     margin-bottom: 5px;
+    
 }
 
 .contact-form input{
     width: 100%;
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid #000000;
 
 }
 .contact-form select{
@@ -484,7 +488,7 @@ nav .profile-details i{
   padding: 10px;
   border: 1px solid #ddd;
 }
-#contact textarea{
+.contact textarea{
     height: 200px;
     width: 100%;
 }
@@ -492,7 +496,9 @@ nav .profile-details i{
 .contact-form input:focus,
 .contact-form textarea:focus{
     outline: none;
-    border-color: #265ede;
+    border-color: #000000;
+    
+    
 }
 .text-muted {
   font-size: 20px;
@@ -504,7 +510,7 @@ nav .profile-details i{
 .btn{
   display: inline-block;
   padding: 07px 16px;
-  background: #29a818;
+  background: #000000;
   border: none;
   cursor: pointer;
   font-size: 16px;
@@ -514,5 +520,5 @@ nav .profile-details i{
 }
 
 .btn:hover{
-  background: #072c04;
+  background: #646459cb;
 }

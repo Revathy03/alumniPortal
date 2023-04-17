@@ -6,10 +6,10 @@
   font-family: 'Poppins', sans-serif;
 }
 .sidebar{
-  position: fixed;
-  height: 100%;
-  width: 240px;
-  background: #0A2558;
+  position: absolute;
+  height: 1160px;
+  width: 233px;
+  background: #000000d5;
   transition: all 0.5s ease;
 }
 .sidebar.active{
@@ -49,19 +49,19 @@
   transition: all 0.4s ease;
 }
 .sidebar .nav-links li a.active{
-  background: #081D45;
+  background: #a5a5a5cc;
 }
 .sidebar .nav-links li a:hover{
-  background: #081D45;
+  background: #fffb00ab;
 }
 .sidebar .nav-links li i{
   min-width: 60px;
   text-align: center;
   font-size: 18px;
-  color: #fff;
+  color: #ffffff;
 }
 .sidebar .nav-links li a .links_name{
-  color: #fff;
+  color: #ffffff;
   font-size: 15px;
   font-weight: 400;
   white-space: nowrap;
@@ -72,8 +72,8 @@
   width: 100%;
 }
 .home-section{
-  position: relative;
-  background: #f5f5f5;
+  position:sticky;
+  background: #ffffffe1;
   min-height: 100vh;
   width: calc(100% - 240px);
   left: 240px;
@@ -87,14 +87,14 @@
   display: flex;
   justify-content: space-between;
   height: 80px;
-  background: #fff;
+  background: #fbff1bb9;
   display: flex;
   align-items: center;
-  position: fixed;
-  width: calc(100% - 240px);
+  /* position: fixed; */
+  /* width: calc(100% - 240px); */
   left: 240px;
   z-index: 100;
-  padding: 0 20px;
+  padding: 20px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   transition: all 0.5s ease;
 }
@@ -123,7 +123,7 @@ nav .search-box input{
   height: 100%;
   width: 100%;
   outline: none;
-  background: #F5F6FA;
+  background: #ffffff;
   border: 2px solid #EFEEF1;
   border-radius: 6px;
   font-size: 18px;
@@ -133,21 +133,21 @@ nav .search-box .bx-search{
   position: absolute;
   height: 40px;
   width: 40px;
-  background: #2697FF;
+  background: #fffeff;
   right: 5px;
   top: 50%;
   transform: translateY(-50%);
   border-radius: 4px;
   line-height: 40px;
   text-align: center;
-  color: #fff;
+  color: #070707;
   font-size: 22px;
   transition: all 0.4 ease;
 }
 .home-section nav .profile-details{
   display: flex;
   align-items: center;
-  background: #F5F6FA;
+  background: #ffffff;
   border: 2px solid #EFEEF1;
   border-radius: 6px;
   height: 50px;
@@ -159,17 +159,19 @@ nav .profile-details img{
   width: 40px;
   border-radius: 6px;
   object-fit: cover;
+  display: flex;
+ 
 }
 nav .profile-details .admin_name{
   font-size: 15px;
   font-weight: 500;
-  color: #333;
+  color: #000000;
   margin: 0 10px;
   white-space: nowrap;
 }
 nav .profile-details i{
   font-size: 25px;
-  color: #333;
+  color: #000000;
 }
 .home-section .home-content{
   position: relative;
@@ -189,7 +191,7 @@ nav .profile-details i{
   align-items: center;
   justify-content: center;
   width: calc(100% / 4 - 15px);
-  background: #fff;
+  background: #ffffff;
   padding: 15px 14px;
   border-radius: 12px;
   box-shadow: 0 5px 10px rgba(0,0,0,0.1);
@@ -299,7 +301,7 @@ nav .profile-details i{
 }
 .sales-boxes .box .button a{
   color: #fff;
-  background: #0A2558;
+  background: #000000;
   padding: 4px 12px;
   font-size: 15px;
   font-weight: 400;
@@ -308,7 +310,7 @@ nav .profile-details i{
   transition: all 0.3s ease;
 }
 .sales-boxes .box .button a:hover{
-  background:  #0d3073;
+  background:  #eeff00b9;
 }
 
 /* Right box */
@@ -443,7 +445,7 @@ nav .profile-details i{
   width: 70px;
   display: flex;
   color: #fff;
-  background: #33adff;
+  background: #000000;
   padding: 4px 12px;
   font-size: 15px;
   font-weight: 400;
@@ -495,7 +497,7 @@ border: 1px solid #ddd;
 .btn{
   display: inline-block;
   padding: 07px 16px;
-  background: #1606f7;
+  background: #000000;
   border: none;
   cursor: pointer;
   font-size: 16px;
@@ -505,7 +507,7 @@ border: 1px solid #ddd;
 }
 
 .btn:hover{
-  background: #220a8d;
+  background: #00000080;
 }
 .post-container {
   display: flex;
