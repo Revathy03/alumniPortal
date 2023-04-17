@@ -18,7 +18,7 @@ export class AppComponent {
 
   ngOnInit(){
 
-    this.router.navigate(['/adm-dashboard'])
+    this.router.navigate(['/contact'])
   }
 
   /*public fetch(){

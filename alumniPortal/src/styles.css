@@ -110,10 +110,18 @@ body {
 
 }
 
-.sidebar{
+/* .sidebar1{
+    position: absolute;
+
+    
+    min-height: 100vh;
+    width: 233px;
+    background: #000000d5;
+    transition: all 0.5s ease;
+  } */
+  .sidebar{
     position: absolute;
     /* position: fixed; */
-    
     min-height: 100vh;
     width: 233px;
     background: #000000d5;
@@ -127,7 +135,7 @@ body {
     background: #fffb00ab;
   }
   .home-section{
-    position:sticky;
+    position:absolute;
     background: #ffffffe1;
     min-height: 100vh;
     width: calc(100% - 240px);
@@ -139,7 +147,6 @@ body {
     justify-content: space-between;
     height: 80px;
     background: #fbff1bb9;
-    display: flex;
     align-items: center;
     /* position: fixed; */
     /* width: calc(100% - 240px); */
