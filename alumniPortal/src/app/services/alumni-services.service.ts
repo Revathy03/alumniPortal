@@ -11,11 +11,11 @@ public uid:number|undefined;
 
   constructor(private _http:HttpClient) { }
 
-  userUrl:string="http://sample.ieeesblbsitw.org/api/users";
-  memberreqUrl:string="http://sample.ieeesblbsitw.org/api/memberreqs";
-  authUrl:string="http://sample.ieeesblbsitw.org/api/auth/local";
-  publishUrl:string="http://sample.ieeesblbsitw.org/api/publishes";
-  commentsUrl:string="http://sample.ieeesblbsitw.org/api/comments";
+  userUrl:string="http://localhost:1337/api/users";
+  memberreqUrl:string="http://localhost:1337/api/memberreqs";
+  authUrl:string="http://localhost:1337/api/auth/local";
+  publishUrl:string="http://localhost:1337/api/publishes";
+  commentsUrl:string="http://localhost:1337/api/comments";
 
   public fetchAlumnis():any{
     return this._http.get(this.userUrl)   
