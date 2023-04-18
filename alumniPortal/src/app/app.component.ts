@@ -22,7 +22,7 @@ export class AppComponent {
 
   ngOnInit(){
 
-   // this.router.navigate(['/home'])
+   this.router.navigate(['/dashboard'])
   }
 
   /*public fetch(){
