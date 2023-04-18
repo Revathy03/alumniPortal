@@ -20,7 +20,7 @@ export class EditProfileComponent {
     //   this.router.navigate(['/home']);
     // }
     this.id=this._service.uid;
-    this.id=6;
+    //this.id=6;
     this._service.fetchAlumni(this.id).subscribe(
       (res: any)=>{
         this.user=res;
