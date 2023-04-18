@@ -129,10 +129,10 @@ body {
   }
 
   .sidebar .nav-links li a.active{
-    background: #a5a5a5cc;
+    background: #fffb00ab;
   }
   .sidebar .nav-links li a:hover{
-    background: #fffb00ab;
+    background: #a5a5a5cc;
   }
   .home-section{
     position:absolute;
