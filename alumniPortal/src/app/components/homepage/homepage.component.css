@@ -31,7 +31,8 @@ a:hover{
     font-size: 16px;
     padding: 10px;
     text-align: justify;
-    background-color: #000000be;
+    background-color: #d4d4d4d8;
+    color: #000000;
     /* width: 1200px;;
     padding: 100px; */
     border-radius: 10px;
@@ -44,7 +45,9 @@ a:hover{
   font-size: 16px;
   padding: 10px;
   text-align: justify;
-  background-color: #000000be;
+   background-color: #d4d4d4d8;
+    color: #000000;
+    font-weight:lighter;
   /* width: 1000px;; */
   /* padding: 100px; */
   border-radius: 10px;
@@ -361,3 +364,66 @@ a:hover{
     color:#fff;
 
 } */
+
+/* addon */
+.slideshow-container {
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  .mySlides {
+    display: none;
+    width: 100%;
+    height: auto;
+  }
+  
+  .mySlides img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .prev,
+  .next {
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .dots-container {
+    text-align: center;
+  }
+  
+  .dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 4px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active,
+  .dot:hover {
+    background-color: #717171;
+  }
