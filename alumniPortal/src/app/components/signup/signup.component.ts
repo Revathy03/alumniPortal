@@ -76,7 +76,7 @@ export class SignupComponent {
  }
 
  public memberlist(){
-  this.router.navigate(['/alumnilist'],)
+  this.router.navigate(['/members'],)
 
 }
  

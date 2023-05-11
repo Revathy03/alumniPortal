@@ -34,7 +34,7 @@ export class EventsComponent {
 
   }
   public memberlist(){
-    this.router.navigate(['/alumnilist'],)
+    this.router.navigate(['/members'],)
 
   }
 }

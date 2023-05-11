@@ -50,7 +50,7 @@
             <div class="recent-sales box"style="width:100%">
               <div class="title">Members:</div><br><br>
            
-            <table >
+            <table style="color: black;">
               <thead>
                 <tr>
                   <td><b>Name</b></td>
@@ -61,7 +61,7 @@
               </thead>
               <tbody>
                 <tr *ngFor="let alumni of alumnis"> 
-                  <td *ngIf="!alumni.admin"><img src="assets/images/users/profile.png" class="img-fluid " alt="" />  {{alumni.name.toUpperCase()}}</td>
+                  <td *ngIf="!alumni.admin">  {{alumni.name.toUpperCase()}}</td>
                   <td *ngIf="!alumni.admin"> {{alumni.yop}}</td>
                   <td *ngIf="!alumni.admin"> {{alumni.department}}</td>
                   <td *ngIf="!alumni.admin"> {{alumni.company}}</td>
