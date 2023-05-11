@@ -14,6 +14,7 @@ export class HomepageComponent {
 
   ngOnInit(){
     this._service.token=null;
+    
   }
 
   public eventspage(){                                 //to navigate between pages from nav bar
