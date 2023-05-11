@@ -38,6 +38,11 @@ export class LogInComponent {
 
   }
 
+  public memberlist(){
+    this.router.navigate(['/alumnilist'],)
+
+  }
+
   public logIn(){
 
     if(this.identifier && this.password){

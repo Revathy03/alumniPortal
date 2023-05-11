@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 export class AlumniServicesService {
 
 public token:any|undefined;
-public uid:number|undefined;
+public uid:number=1;
 
   constructor(private _http:HttpClient) { }
 

@@ -75,4 +75,11 @@ export class SignupComponent {
   this.router.navigate(['/home'],)
  }
 
+ public memberlist(){
+  this.router.navigate(['/alumnilist'],)
+
+}
+ 
+ 
+
 }

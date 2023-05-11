@@ -18,6 +18,7 @@ import { AlumniListComponent } from './components/alumni-list/alumni-list.compon
 import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
 import { AlumniAlumniListComponent } from './components/alumni-alumni-list/alumni-alumni-list.component';
 import { RequestListComponent } from './components/request-list/request-list.component';
+import { MemberDisplayComponent } from './components/member-display/member-display.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,10 @@ import { RequestListComponent } from './components/request-list/request-list.com
     EditProfileComponent,
     
     AlumniAlumniListComponent,
-         RequestListComponent
+         RequestListComponent,
+         MemberDisplayComponent,
+         
+        
   ],
   imports: [
     BrowserModule,

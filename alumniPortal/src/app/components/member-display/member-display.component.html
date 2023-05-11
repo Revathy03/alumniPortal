@@ -7,62 +7,34 @@
         <!-- <link rel="stylesheet" href="style.css"> -->
         <!-- Boxicons CDN Link -->
         <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      />
          <meta name="viewport" content="width=device-width, initial-scale=1.0">
        </head>
-    <body>
-      <div class="sidebar">
-        <div class="logo-details">
-          
-          
-        </div>
-        <ul class="nav-links">
-          <li>
-            <a (click)="dashboard()" >
-              <i class='bx bx-grid-alt' ></i>
-              <span class="links_name">Dashboard</span>
-            </a>
-          </li>
-          <li>
-            <a (click)="editprof()">
-              <i class='bx bx-box' ></i>
-              <span class="links_name" >Update-Profile</span>
-            </a>
-          </li>
-          <li>
-            <a (click)="alumniList()"class="active">
-              <i class='bx bx-list-ul' ></i>
-              <span class="links_name" >Members-List</span>
-            </a>
-          </li>
-         
-          <li class="log_out">
-            <a (click)="logout()">
-              <i class='bx bx-log-out'></i>
-              <span class="links_name"  >Log out</span>
-            </a>
-          </li>
-        </ul>
-    </div>
-      <section class="home-section">
-        <nav>
-          <div class="sidebar-button">
-            <i class='bx bx-menu sidebarBtn'></i>
-            <span class="dashboard">LBSITW</span>
-          </div>
-          <!-- <div class="search-box">
-            <input type="text" placeholder="Search...">
-            <i class='bx bx-search' ></i>
-          </div> -->
-          <div class="profile-details">
-            <!--<img src="images/profile.jpg" alt="">-->
-            <div class="notify-icon">
-              <img src="assets/images/users/profile.png" class="img-fluid rounded-circle" alt="" />
-          </div>
-            <span class="admin_name">{{user.name}}</span>
-            
-      
+       <header>
+        <!-- Navbar -->
+        <nav id="navbar">
+          <div class="container">
+            <img src="assets/images/collegelogo2.png" id="logo">
+            <ul>
+              <li><a (click)="homepage()">Home</a></li>
+              <li><a (click)="eventspage()">Events</a></li>
+              <li><a (click)="contactpage()">Contact</a></li>
+              <li><a (click)="memberlist()">Members</a></li>
+              <li><a (click)="signin()">Sign In</a></li>
+              <li><a (click)="signup()">Sign Up</a></li>
+  
+            </ul>
           </div>
         </nav>
+      
+      </header>
+    <body>
+      
+      <section >
+       
          
     
         <div class="home-content">
@@ -81,7 +53,7 @@
             <table >
               <thead>
                 <tr>
-                  <td><b>User</b></td>
+                  <td><b>Name</b></td>
                   <td><b>Batch</b></td>
                   <td><b>Branch</b></td>
                   <td><b>Company</b></td>

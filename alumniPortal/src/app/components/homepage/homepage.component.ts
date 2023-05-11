@@ -35,4 +35,9 @@ export class HomepageComponent {
     this.router.navigate(['/signin'],)
 
   }
+
+  public memberlist(){
+    this.router.navigate(['/members'],)
+
+  }
 }

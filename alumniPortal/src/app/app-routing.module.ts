@@ -11,6 +11,7 @@ import { EditProfileComponent } from './components/edit-profile/edit-profile.com
 import { AlumniListComponent } from './components/alumni-list/alumni-list.component';
 import { AlumniAlumniListComponent } from './components/alumni-alumni-list/alumni-alumni-list.component';
 import { RequestListComponent } from './components/request-list/request-list.component';
+import { MemberDisplayComponent } from './components/member-display/member-display.component';
 
 const routes: Routes = [
   {
@@ -62,6 +63,11 @@ const routes: Routes = [
   path:'requests', 
   component:RequestListComponent
 },
+{
+  path:'members', 
+  component:MemberDisplayComponent
+},
+
 ];
 
 @NgModule({

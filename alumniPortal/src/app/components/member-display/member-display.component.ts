@@ -4,12 +4,11 @@ import { AlumniDataService } from 'src/app/services/alumni-data.service';
 import { AlumniServicesService } from 'src/app/services/alumni-services.service';
 
 @Component({
-  selector: 'app-alumni-alumni-list',
-  templateUrl: './alumni-alumni-list.component.html',
-  styleUrls: ['./alumni-alumni-list.component.css']
+  selector: 'app-member-display',
+  templateUrl: './member-display.component.html',
+  styleUrls: ['./member-display.component.css']
 })
-export class AlumniAlumniListComponent {
-
+export class MemberDisplayComponent {
   public alumnis:any;
   id :number|undefined;
   user:any;
@@ -39,22 +38,31 @@ export class AlumniAlumniListComponent {
 
   }
 
-  public dashboard(){    
-    this.router.navigate(['/dashboard'],)    
-}
+  public eventspage(){                                 //to navigate between pages from nav bar
+    this.router.navigate(['/events'],)
+  }
+  public contactpage(){
+    this.router.navigate(['/contact'],)
 
-public editprof(){
-  this.router.navigate(['/profile'],)
-}
+  }
+  public homepage(){
+    this.router.navigate(['/home'],)
 
-public logout(){
-  this.router.navigate(['/home'],)
-}
+  }
+  public signup(){
+    this.router.navigate(['/signup'],)
 
-public alumniList(){
-  this.router.navigate(['/alumnilist'],)
-}
+  }
+  public signin(){
+    this.router.navigate(['/signin'],)
+
+  }
+
+  public memberlist(){
+    this.router.navigate(['/members'],)
+
+  }
 
 
+
 }
-  

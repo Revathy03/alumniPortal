@@ -77,5 +77,9 @@ export class ContactComponent {
     });
 
    }
+   public memberlist(){
+    this.router.navigate(['/alumnilist'],)
+
+  }
 }
  
