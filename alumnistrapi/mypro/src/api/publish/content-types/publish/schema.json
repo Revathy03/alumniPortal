@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "publishes",
+  "info": {
+    "singularName": "publish",
+    "pluralName": "publishes",
+    "displayName": "publish"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "dateofpost": {
+      "type": "date"
+    },
+    "files": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

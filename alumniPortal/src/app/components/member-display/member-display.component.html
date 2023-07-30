@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+    <!-- Designined by CodingLab | www.youtube.com/codinglabyt -->
+    <html lang="en" dir="ltr">
+      <head>
+        <meta charset="UTF-8">
+        <!--<title> Responsiive Admin Dashboard | CodingLab </title>-->
+        <!-- <link rel="stylesheet" href="style.css"> -->
+        <!-- Boxicons CDN Link -->
+        <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      />
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       </head>
+       <header>
+        <!-- Navbar -->
+        <nav id="navbar">
+          <div class="container">
+            <img src="assets/images/collegelogo2.png" id="logo">
+            <ul>
+              <li><a (click)="homepage()">Home</a></li>
+              <li><a (click)="eventspage()">Events</a></li>
+              <li><a (click)="contactpage()">Contact</a></li>
+              <li><a (click)="memberlist()">Members</a></li>
+              <li><a (click)="signin()">Sign In</a></li>
+              <li><a (click)="signup()">Sign Up</a></li>
+  
+            </ul>
+          </div>
+        </nav>
+      
+      </header>
+    <body>
+      
+      <section >
+       
+         
+    
+        <div class="home-content">
+          <div class="overview-boxes">
+          
+           
+            
+          
+          </div>
+    
+          <div class="sales-boxes">
+            
+            <div class="recent-sales box"style="width:100%">
+              <div class="title">Members:</div><br><br>
+           
+            <table style="color: black;">
+              <thead>
+                <tr>
+                  <td><b>Name</b></td>
+                  <td><b>Batch</b></td>
+                  <td><b>Branch</b></td>
+                  <td><b>Company</b></td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let alumni of alumnis"> 
+                  <td *ngIf="!alumni.admin">  {{alumni.name.toUpperCase()}}</td>
+                  <td *ngIf="!alumni.admin"> {{alumni.yop}}</td>
+                  <td *ngIf="!alumni.admin"> {{alumni.department}}</td>
+                  <td *ngIf="!alumni.admin"> {{alumni.company}}</td>
+                   
+                </tr>
+              </tbody>
+            </table>
+          </div>
+      
+      
+        </div>
+        
+          </div>
+        
+      </section>
+    
+      <script>
+       let sidebar = document.querySelector(".sidebar");
+    let sidebarBtn = document.querySelector(".sidebarBtn");
+    sidebarBtn.onclick = function() {
+      sidebar.classList.toggle("active");
+      if(sidebar.classList.contains("active")){
+      sidebarBtn.classList.replace("bx-menu" ,"bx-menu-alt-right");
+    }else
+      sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+    }
+     </script>
+    
+    </body>
+    </html>
+    
+    
+
